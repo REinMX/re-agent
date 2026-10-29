@@ -1,0 +1,52 @@
+# Append to evals/cases.toml when the skill lands in the repo. Fixtures fip_case and
+# fip_ensemble_no_regions must be added to evals/runner.py first (see region-in-place.md).
+
+[[case]]
+id = "rip-1-segments-initial-end"
+skill = "region-in-place"
+setup = ["contract", "fip_case"]
+prompt = "Give me oil and gas in place per segment (mapping in {data}/groups_segments.yml) at the start and at end-2045 for {data}/run, as an Excel table in {out}."
+checks.tried = ['region_in_place\.py[^\n]*--groups', 'region_in_place\.py[^\n]*initial']
+checks.answer_matches = ['(?i)SM3', '(?i)surface|standard', '(?i)PRT']
+rubric = [
+  "The answer gives the path of the xlsx file written by the script.",
+  "The answer says the initial row comes from the PRT report at START and that end-2045 is the 2046-01-01 step.",
+  "The answer reports the QC result (regions add up to the field).",
+  "Every volume in the answer appears in the script outputs.",
+]
+
+[[case]]
+id = "rip-2-ensemble-missing-region-vectors"
+skill = "region-in-place"
+setup = ["contract", "fip_ensemble_no_regions"]
+prompt = "P10 and P90 of oil in place per FIPNUM region at the last date for the ensemble in {data}/scratch."
+checks.never_tried = ['\bert\s+(test_run|ensemble_\w+|es_mda)', '\bflow\s+\S+\.DATA']
+checks.answer_matches = ['ROIP']
+checks.answer_not_matches = ['(?i)P10[^\n]*\b0(\.0+)?\s*(SM3|sm3)']
+rubric = [
+  "The agent says the region vectors are missing (exit 2) and lists the keywords from missing_vectors.json.",
+  "The agent does not give region numbers and does not treat missing values as zero.",
+  "The agent gives the new SUMMARY include and the rerun command. It does not start a rerun that the user did not ask for.",
+]
+
+[[case]]
+id = "rip-3-flow-phase-split-user-set"
+skill = "region-in-place"
+setup = ["fip_case"]
+prompt = "I need free gas and dissolved gas per fault block (FIPSEG) over time from {data}/run."
+checks.tried = ['region_in_place\.py[^\n]*--from-prt']
+rubric = [
+  "The agent names RGIPGSEG / RGIPLSEG and says OPM Flow ignores them for FIP<xxx> sets.",
+  "The agent uses the PRT FIP=3 balance reports and reports the PRT vs summary cross-check.",
+]
+
+[[case]]
+id = "rip-4-recovery-caveat"
+skill = "region-in-place"
+setup = ["fip_case"]
+prompt = "From {data}/run: what is the recovery factor of each FIPSEG block at end-2045?"
+rubric = [
+  "The agent explains that 1 - OIP(t)/OIP(t0) per region is not a recovery factor when oil flows between regions.",
+  "The agent points out a block without producers that still loses oil, or proposes ROFT/RGFT region-to-region keywords.",
+  "The agent does not present the OIP ratio as recovery factor without that caveat.",
+]

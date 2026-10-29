@@ -1,0 +1,59 @@
+# Example site contract, schema version 2.1: a generic home or lab Linux machine.
+# Copy to ~/.config/re-agent/site.contract.yml or to <project>/site.contract.yml. Do not commit the copy.
+# Replace every <...> value. tools/doctor.py reports each one that is left as "unfilled".
+# Check: python tools/doctor.py --mode agent --contract <copy> --profile home
+# Schema: site.contract.schema.json. Profile selection: --profile, then RE_AGENT_PROFILE, then active_profile.
+
+schema_version: 2
+active_profile: home
+
+profiles:
+  home:
+    agent_host: linux                    # linux or windows: where the agent process runs
+    execution_mode: direct               # direct or manual
+    data_classification: synthetic       # use only public or synthetic data here
+    model_endpoint: "<ASK: approved model endpoint id; never credentials>"
+    endpoint_approved: false             # set true only after a human decision
+    python: /opt/venv/bin/python         # the interpreter that has ert and res2df
+    activate: "source /opt/venv/bin/activate"
+    activate_shell: bash                 # bash or tcsh
+    komodo_release: ""                   # label only; empty when there is no Komodo
+    ert:
+      executable: ert
+      version: "<ASK: ert version, for example 14.0>"
+    simulator:
+      name: FLOW                         # FLOW, ECLIPSE100, ECLIPSE300, or IX
+      executable: /opt/opm/bin/flow
+      wrapper: native                    # native, docker, or komodo
+      version: "<ASK: flow version string; doctor does not run flow>"
+      forward_model: FLOW
+      license_env: ""                    # Flow needs no license
+    flow_cmd:
+    flow_extra_args:
+    queue:
+      system: LOCAL                      # LOCAL, LSF, SLURM, or TORQUE
+      max_running: 4
+      name: ""
+      options: {}
+    scratch_root: /opt/fmu/scratch/$USER  # $VAR and ${VAR} expand from the environment
+    output_root: /opt/fmu/deliverables
+    sumo:
+      enabled: false
+      environment: ""
+    everest:
+      enabled: false
+    everest_executable: ""               # the Everest command; empty when the profile has no Everest
+    versions: {}                         # optional: distribution -> expected version prefix
+
+# Project level: what the project is. The same for every profile.
+project: "<ASK: short project name>"
+eclbase: "<ASK: deck base, relative to the runpath, for example eclipse/model/DECK>"
+runpath:
+  pattern: realization-<IENS>/iter-<ITER>
+  default_iter: iter-0
+expected_realizations: "<ASK: number of realizations>"
+p10_p90: numerical                       # numerical or exceedance. State it in every report.
+paths:
+  deliverables: ${output_root}
+vectors:
+  required_summary: [FOPT, FWPT, FGPT, FOPR]

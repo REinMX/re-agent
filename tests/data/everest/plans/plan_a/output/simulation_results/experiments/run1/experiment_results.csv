@@ -1,0 +1,4 @@
+batch_id,realization,simulation_id,perturbation,batch_npv,batch_total_objective_value,rate.A5,rate.A6,npv
+0,0,0,,1400,-1400,6500,6500,1400
+1,0,1,,1500,-1500,5000,12000,1500
+2,0,2,,1450,-1450,5200,6000,1450

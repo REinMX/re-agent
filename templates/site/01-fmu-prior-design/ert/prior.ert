@@ -1,0 +1,19 @@
+-- {{param:case_name}}: prior ensemble. Site values come from the site contract profile.
+DEFINE <CASE>      {{param:case_name}}
+DEFINE <SCRATCH>   {{site:scratch_root}}
+DEFINE <DECK_DIR>  {{param:deck_dir}}
+NUM_REALIZATIONS   {{param:num_realizations}}
+RANDOM_SEED        {{param:random_seed}}
+RUNPATH            <SCRATCH>/<CASE>/realization-<IENS>/iter-<ITER>
+ENSPATH            <CONFIG_PATH>/../output/<CASE>/storage
+RUNPATH_FILE       <CONFIG_PATH>/../output/<CASE>/runpath_file
+ECLBASE            {{param:eclbase}}
+
+QUEUE_SYSTEM       {{site:queue.system}}
+QUEUE_OPTION       {{site:queue.system}} MAX_RUNNING {{site:queue.max_running}}
+QUEUE_OPTION       {{site:queue.system}} {{param:queue_name_option}} {{site:queue.name}}
+-- NUM_CPU > 1 means MPI for FLOW. Do not give FLOW a --threads argument.
+NUM_CPU            {{param:num_cpu}}
+MAX_RUNTIME        {{param:max_runtime}}
+
+INCLUDE model.ert

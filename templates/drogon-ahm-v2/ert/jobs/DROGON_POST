@@ -1,0 +1,2 @@
+EXECUTABLE ../../jobs/drogon_post.py
+ARGLIST <ECLBASE> <IENS>

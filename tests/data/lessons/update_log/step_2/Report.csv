@@ -1,0 +1,10 @@
+observation_key,index,observations,std,obs_error_scaling,scaled_obs_error,response_mean,response_std,status,missing_realizations
+WOPR_OP1_1,2020-01-01,100,10,2.0,20,100,3.2320,Active,
+WOPR_OP1_2,2020-02-01,100,10,2.0,20,100,3.2320,Active,
+WOPR_OP1_3,2020-03-01,100,10,2.0,20,100,3.2320,Active,
+WOPR_OP2_1,2020-01-01,100,10,2.0,20,100,4.0400,Active,
+WOPR_OP2_2,2020-02-01,100,10,2.0,20,100,4.0400,Active,
+WOPR_OP2_3,2020-03-01,100,10,2.0,20,100,4.0400,Active,
+WOPR_OP3_1,2020-01-01,100,10,2.0,20,100,5.0500,Active,
+WOPR_OP3_2,2020-02-01,100,10,2.0,20,100,5.0500,Active,
+WOPR_OP3_3,2020-03-01,100,10,2.0,20,100,5.0500,Active,

@@ -1,0 +1,45 @@
+# Template values. render_template.py reads the defaults here; --set name=value overrides one.
+# A null value has no default: give it with --set. The defaults document the public Drogon example
+# (OPM/opm-tests, ODbL). Render 03-everest-robust-well-control first, into a sibling folder of this one.
+
+agent_root: null                  # absolute path of the reservoir-engineer-agent checkout (or .reservoir-agent)
+case_name: algorithm_check
+well_control_dir: ../03-everest-robust-well-control  # the rendered 03 folder (job and config generator), relative to this folder
+pred_deck: null                   # absolute path of the prediction DATA file (Drogon example: DROGON_PRED.DATA)
+restart_link: HIST/DROGON
+restart_glob: model/DROGON-*.UNRST
+include_dir: include
+schedule_file: pred.sch
+flow_args: --threads-per-process=1  # options for the simulator itself. The ERT FLOW step must not get --threads.
+
+ahm_case: drogon_ahm
+ahm_last_iter: 4
+realizations: [0, 1, 2, 3]        # dry run only; the posterior link snippet gives them otherwise
+used_realizations: 4              # the configs and the scan use the first N realizations
+random_seed: 20261015
+max_runtime: 1200
+
+start: 2020-07-01
+end: 2025-01-01
+periods: [2020-07-01]
+report_months: 3
+bhp_min_prod: 150.0
+bhp_max_inj: 500.0
+producers: {A1: 3000.0, A2: 4000.0, A3: 4000.0, A4: 4000.0}
+injectors: {A5: 6500.0, A6: 6500.0}   # exactly two injectors: the two controls
+
+inj_min: 1000.0
+inj_max: 12000.0
+inj_perturbation: 500.0
+optpp_batches: 8
+cobyla_batches: 14
+slsqp_batches: 5
+scan_rates: [1000.0, 3750.0, 6500.0, 9250.0, 12000.0]   # grid values for each of the two controls
+
+oil_price: 400.0
+gas_price: 0.12
+water_production_cost: 30.0
+water_injection_cost: 10.0
+discount_rate: 0.08
+
+jobs: custom  # everest_models or custom

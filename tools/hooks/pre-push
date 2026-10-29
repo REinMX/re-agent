@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Opt-in with `make hooks PY=/path/to/python`. Runs the clean check on every commit being pushed,
+# with PY from the environment or else the interpreter that `make hooks` recorded.
+# Actions is off, so this is the check that stands in for CI. Skip once: git push --no-verify.
+set -euo pipefail
+unset PYTHONPATH PYTHONHOME
+root=$(git rev-parse --show-toplevel)
+py=${PY:-$(git config --get reservoirAgent.python || true)}
+while read -r local_ref local_sha _remote_ref _remote_sha; do
+  [[ $local_sha =~ ^0+$ ]] && continue
+  if [[ -z $py ]]; then
+    echo "pre-push: no Python interpreter. Run make hooks PY=/path/to/python, or set PY for this push." >&2
+    exit 1
+  fi
+  echo "pre-push: clean check of ${local_sha:0:12} ($local_ref) with $py"
+  # The interpreter's own bin first: ERT plugins find their programs on PATH. The path as given, not resolved:
+  # a venv python is a symlink to the base interpreter. A bare name adds nothing, never ".".
+  path=$PATH
+  [[ $py == */* ]] && path="$(dirname "$py"):$PATH"
+  PATH="$path" "$root/tools/clean_check.sh" --ref "$local_sha" check-here PY="$py" </dev/null
+done

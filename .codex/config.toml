@@ -1,0 +1,13 @@
+# Linux VS Code / Codex project harness. Loaded only after you trust this project.
+# This file is not a sandbox and not site approval.
+
+sandbox_mode = "workspace-write"
+approval_policy = { granular = { sandbox_approval = true, rules = true, mcp_elicitations = true, request_permissions = true, skill_approval = true } }
+
+[mcp_servers.reservoir]
+command = "python3"
+args = ["tools/mcp_server.py"]
+startup_timeout_sec = 20
+tool_timeout_sec = 60
+default_tools_approval_mode = "prompt"
+enabled_tools = ["list_skills", "doctor", "show_workflow"]

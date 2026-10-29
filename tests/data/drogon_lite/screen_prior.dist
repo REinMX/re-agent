@@ -1,0 +1,27 @@
+-- Prior distributions of the parameters in global_variables.yml.tmpl.
+-- Syntax: <TAG> <DISTRIBUTION> <arguments>. The tags are the ones in fmuconfig/input/global_master_config.yml.
+
+PORO_CH          UNIFORM   0.20  0.30
+PORO_FP          UNIFORM   0.10  0.22
+
+KVKH_UPPER       LOGUNIF   0.02  0.5
+KVKH_LOWER       LOGUNIF   0.02  0.5
+MULTZ_BARRIER    LOGUNIF   0.0001  1.0
+
+ROCK_CMULT       LOGUNIF   0.5   2.0
+AQ_VOL           LOGUNIF   1.0e6 1.0e8
+AQ_PI            LOGUNIF   0.5   50
+PI_P1            LOGUNIF   0.25  4.0
+PI_P2            LOGUNIF   0.25  4.0
+PI_P3            LOGUNIF   0.25  4.0
+
+OWC_WEST         UNIFORM   1980  2000
+OWC_EAST         UNIFORM   1998  2018
+
+SCAL_WO_CH       UNIFORM   -1    1
+SCAL_WO_FP       UNIFORM   -1    1
+SCAL_GO          UNIFORM   -1    1
+-- Fault option "split": one transmissibility multiplier per segment of F1 (north F1N, south F1S).
+-- Same log-uniform prior for both, wide enough for a sealing (0.001) and an open (1) segment.
+MULTFLT_F1N      LOGUNIF   0.001 1.0
+MULTFLT_F1S      LOGUNIF   0.001 1.0

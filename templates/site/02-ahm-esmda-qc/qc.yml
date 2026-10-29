@@ -1,0 +1,19 @@
+# Inputs of bin/qc_chain.py. Relative paths are relative to this folder.
+agent_root: {{param:agent_root}}
+config: ert/ahm.ert
+dist: {{param:prior_dir}}/ert/prior.dist
+obs: {{param:obs_config}}
+truth: {{param:truth_file}}
+case_dir: {{site:scratch_root}}/{{param:case_name}}
+eclbase: {{param:eclbase}}
+update_log: output/{{param:case_name}}/update_log
+realizations: {{param:num_realizations}}
+weights: "{{param:esmda_weights}}"
+# ahm_preflight.py refuses the run without this record (screen_params.py writes it).
+screening: output/{{param:case_name}}/screening/screening.json
+# null: the members rule applies (100). A reason accepts fewer, and is passed as --allow-members.
+allow_members_reason: {{param:allow_members_reason}}
+# The RANDOM_SEED of ert/ahm.ert. compensation_check.py declares it. One seed is a diagnostic only.
+random_seed: {{param:random_seed}}
+# null: no held-out score. A path to an ahm-heldout/1 split.json runs heldout_score.py.
+heldout_split: {{param:heldout_split}}

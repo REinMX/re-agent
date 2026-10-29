@@ -1,0 +1,2 @@
+EXECUTABLE ../../bin/prior_design.py
+ARGLIST apply parameters.txt include

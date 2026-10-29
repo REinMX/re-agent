@@ -1,0 +1,196 @@
+# Site contract v2.1. Copy to site.contract.yml and fill the empty keys.
+# Keep filled contracts local. Select home or company; do not guess site values.
+schema_version: 2
+active_profile:
+project:
+profiles:
+  home:
+    agent_host:
+    execution_mode:
+    data_classification:
+    model_endpoint:
+    endpoint_approved:
+    python:
+    activate:
+    activate_shell:
+    activate_bash:
+    komodo_release:
+    ert:
+      executable:
+      version:
+    simulator:
+      name:
+      executable:
+      wrapper:
+      version:
+      forward_model:
+      license_env:
+    flow_cmd:
+    flow_extra_args:
+    queue:
+      system:
+      name:
+      max_running:
+    resinsight:
+      bin:
+      headless:
+      gui_launcher:
+      version:
+      python:
+    versions:
+    scratch_root:
+    output_root:
+    sumo:
+      enabled:
+      environment:
+    everest:
+      enabled:
+    everest_output_root:
+    everest_executable:
+    everest_max_sims_per_run:
+    ahm_posterior_case:
+    verified_pins:
+      ert:
+      ropt:
+  company:
+    agent_host:
+    execution_mode:
+    data_classification:
+    model_endpoint:
+    endpoint_approved:
+    python:
+    activate:
+    activate_shell:
+    activate_bash:
+    komodo_release:
+    ert:
+      executable:
+      version:
+    simulator:
+      name:
+      executable:
+      wrapper:
+      version:
+      forward_model:
+      license_env:
+    flow_cmd:
+    flow_extra_args:
+    queue:
+      system:
+      name:
+      max_running:
+    resinsight:
+      bin:
+      headless:
+      gui_launcher:
+      version:
+      python:
+    versions:
+    scratch_root:
+    output_root:
+    sumo:
+      enabled:
+      environment:
+    everest:
+      enabled:
+    everest_output_root:
+    everest_executable:
+    everest_max_sims_per_run:
+    ahm_posterior_case:
+    verified_pins:
+      ert:
+      ropt:
+
+eclbase:
+p10_p90:
+paths:
+  root:
+  project:
+  scratch:
+  scenarios:
+  ert_config:
+  deliverables:
+vectors:
+  headline:
+  at_date_default:
+  yearly_field_default:
+  gas_injection:
+  plot_required:
+  required_summary:
+  # production-kpis recommends FVPR, FVIR, FVPT, FVIT (reservoir-volume VRR), FOIP/FGIP, FGSR and WMCTL/GMCT* in SUMMARY.
+
+# Optional AHM thresholds. Empty values use the script defaults.
+ahm:
+  min_realizations:
+  weight_share_min:
+  weight_share_max:
+
+expected_realizations:
+runpath:
+  pattern:
+  default_iter:
+wells:
+  plot_default:
+report_dates:
+uncertainty:
+  parameters_csv:
+  prior_files:
+  design_matrix:
+prediction_case:
+  template_ert:
+  parameters_csv:
+  cases_root:
+scenario_qc:
+  baseline:
+  headline_vector:
+  compare_vectors:
+  coupled_vectors:
+  coupled_injectors_follow_producers:
+  require_fingerprint_match_runmeta:
+  fail_on_missing_vector:
+  exclude_demo:
+  tolerances:
+    field_headline_end_rel:
+    field_fopt_end_rel:
+    untouched_well_rel:
+# Optional production-kpis settings. Empty values use the script defaults (listed as assumptions in the report).
+production_kpis:
+  plateau:
+    vector:
+    fraction:
+    reference:
+    target:
+    gap_days:
+    resolution:
+  period:
+  gas_sales:
+    vector:
+    subtract:
+    target:
+  binding:
+    rel_tol:
+  npv:
+    oil_price:
+    gas_price:
+    water_production_cost:
+    water_injection_cost:
+    gas_injection_cost:
+    discount_rate:
+    reference_date:
+    currency:
+gate_default_stage:
+# Each user-defined stage needs mode_default and required_artifacts.
+gate_stages:
+
+# Optional local work log (skills/earned-autonomy/scripts/worklog.py). Empty uses ./worklog/pilot.jsonl.
+worklog:
+  path:
+
+# Optional role models. Empty values use the parent model.
+agents:
+  models:
+    code:
+    hardest:
+    judgment:
+    review:
+    fast:

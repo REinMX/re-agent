@@ -1,0 +1,629 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/REinMX/reservoir-engineer-agent/site.contract.schema.json",
+  "title": "Site contract, schema version 2.1",
+  "description": "Nested site contract. profiles.<name> holds where the work runs; the top level holds what the project is. A value that matches <...> is an unfilled placeholder: it is valid here, and tools/doctor.py reports it. Schema version 1 (flat keys) is checked by tools/doctor.py, not by this file.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "profiles",
+    "eclbase",
+    "p10_p90",
+    "paths",
+    "vectors"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 2
+    },
+    "active_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profiles": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/profile"
+      }
+    },
+    "project": {
+      "type": "string"
+    },
+    "field": {
+      "type": "string"
+    },
+    "eclbase": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runpath": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pattern": {
+          "type": "string"
+        },
+        "default_iter": {
+          "type": "string"
+        },
+        "prediction_dirs": {
+          "$ref": "#/$defs/strings"
+        }
+      }
+    },
+    "expected_realizations": {
+      "$ref": "#/$defs/count"
+    },
+    "p10_p90": {
+      "$ref": "#/$defs/p10_p90"
+    },
+    "percentile_convention": {
+      "$ref": "#/$defs/p10_p90"
+    },
+    "paths": {
+      "type": "object",
+      "required": [
+        "deliverables"
+      ],
+      "additionalProperties": {
+        "type": "string"
+      },
+      "properties": {
+        "deliverables": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "report_dates": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "vectors": {
+      "type": "object",
+      "required": [
+        "required_summary"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "required_summary": {
+          "$ref": "#/$defs/strings",
+          "minItems": 1
+        },
+        "required_summary_hm": {
+          "$ref": "#/$defs/strings"
+        },
+        "headline": {
+          "$ref": "#/$defs/strings"
+        },
+        "at_date_default": {
+          "$ref": "#/$defs/strings"
+        },
+        "yearly_field_default": {
+          "$ref": "#/$defs/strings"
+        },
+        "gas_injection": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "plot_required": {
+          "$ref": "#/$defs/strings"
+        }
+      }
+    },
+    "wells": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "naming_regex": {
+          "type": "string"
+        },
+        "producers": {
+          "$ref": "#/$defs/strings"
+        },
+        "injectors": {
+          "$ref": "#/$defs/strings"
+        },
+        "plot_default": {
+          "type": "string"
+        }
+      }
+    },
+    "zones": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        },
+        "minItems": 2
+      }
+    },
+    "uncertainty": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "parameters_csv": {
+          "type": "string"
+        },
+        "prior_files": {
+          "$ref": "#/$defs/strings"
+        },
+        "design_matrix": {
+          "type": "string"
+        }
+      }
+    },
+    "prediction_case": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "template_ert": {
+          "type": "string"
+        },
+        "cases_root": {
+          "type": "string"
+        },
+        "parameters_csv": {
+          "type": "string"
+        }
+      }
+    },
+    "approvals": {
+      "$ref": "#/$defs/strings",
+      "description": "Legacy key. Ignored. Kept so that older contracts stay valid."
+    },
+    "scenario_qc": {
+      "type": "object"
+    },
+    "gate_default_stage": {
+      "type": "string"
+    },
+    "gate_stages": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "mode_default": {
+            "type": "string"
+          },
+          "required_artifacts": {
+            "$ref": "#/$defs/strings"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "versions": {
+      "$ref": "#/$defs/versions"
+    },
+    "ahm": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "min_realizations": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "weight_share_min": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "weight_share_max": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      }
+    },
+    "worklog": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {"type": ["string", "null"], "description": "Local work log file. Keep it outside git or in an ignored folder."}
+      }
+    },
+    "agents": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "models": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "code": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "hardest": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "judgment": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "review": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "fast": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "placeholder": {
+      "type": "string",
+      "pattern": "^<[^<>]*>$"
+    },
+    "strings": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "count": {
+      "anyOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "$ref": "#/$defs/placeholder"
+        }
+      ]
+    },
+    "p10_p90": {
+      "anyOf": [
+        {
+          "enum": [
+            "numerical",
+            "exceedance"
+          ]
+        },
+        {
+          "$ref": "#/$defs/placeholder"
+        }
+      ]
+    },
+    "versions": {
+      "description": "Distribution name -> expected version prefix, for example ert: \"14.0\". doctor compares them with the running interpreter.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "profile": {
+      "type": "object",
+      "required": [
+        "agent_host",
+        "execution_mode",
+        "python",
+        "activate",
+        "activate_shell",
+        "simulator",
+        "queue",
+        "scratch_root",
+        "output_root",
+        "endpoint_approved"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "agent_host": {
+          "anyOf": [
+            {
+              "enum": [
+                "linux",
+                "windows"
+              ]
+            },
+            {
+              "$ref": "#/$defs/placeholder"
+            }
+          ]
+        },
+        "execution_mode": {
+          "anyOf": [
+            {
+              "enum": [
+                "direct",
+                "manual"
+              ]
+            },
+            {
+              "$ref": "#/$defs/placeholder"
+            }
+          ]
+        },
+        "data_classification": {
+          "type": "string"
+        },
+        "model_endpoint": {
+          "type": "string"
+        },
+        "endpoint_approved": {
+          "type": "boolean"
+        },
+        "python": {
+          "type": "string",
+          "minLength": 1
+        },
+        "activate": {
+          "type": "string"
+        },
+        "activate_shell": {
+          "anyOf": [
+            {
+              "enum": [
+                "bash",
+                "tcsh"
+              ]
+            },
+            {
+              "$ref": "#/$defs/placeholder"
+            }
+          ]
+        },
+        "activate_bash": {
+          "type": "string"
+        },
+        "komodo_release": {
+          "type": "string"
+        },
+        "ert": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "executable": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            }
+          }
+        },
+        "simulator": {
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "FLOW",
+                    "ECLIPSE100",
+                    "ECLIPSE300",
+                    "IX"
+                  ]
+                },
+                {
+                  "$ref": "#/$defs/placeholder"
+                }
+              ]
+            },
+            "executable": {
+              "type": "string"
+            },
+            "wrapper": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "native",
+                    "docker",
+                    "komodo"
+                  ]
+                },
+                {
+                  "$ref": "#/$defs/placeholder"
+                }
+              ]
+            },
+            "version": {
+              "type": "string"
+            },
+            "forward_model": {
+              "type": "string"
+            },
+            "license_env": {
+              "type": "string"
+            },
+            "license_server": {
+              "type": "string"
+            }
+          }
+        },
+        "queue": {
+          "type": "object",
+          "required": [
+            "system"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "system": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "LOCAL",
+                    "LSF",
+                    "SLURM",
+                    "TORQUE"
+                  ]
+                },
+                {
+                  "$ref": "#/$defs/placeholder"
+                }
+              ]
+            },
+            "max_running": {
+              "$ref": "#/$defs/count"
+            },
+            "name": {
+              "type": "string"
+            },
+            "lsf_queue": {
+              "type": "string"
+            },
+            "options": {
+              "type": "object"
+            }
+          }
+        },
+        "scratch_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "output_root": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resinsight": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "bin": {
+              "type": "string",
+              "description": "Absolute path of the ResInsight executable or of a launcher that sets the library path."
+            },
+            "headless": {
+              "description": "How ResInsight gets a display for images. xvfb-run: a virtual X display. none: no wrapper, so images need a real DISPLAY. Data work uses console mode and needs no display. offscreen is not valid: the Linux builds ship only the xcb Qt plugin.",
+              "anyOf": [
+                {
+                  "enum": [
+                    "xvfb-run",
+                    "none"
+                  ]
+                },
+                {
+                  "$ref": "#/$defs/placeholder"
+                }
+              ]
+            },
+            "gui_launcher": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string",
+              "description": "ResInsight release, for example 2026.09.1. rips must have the same major.minor."
+            },
+            "python": {
+              "type": ["string", "null"],
+              "description": "Absolute path of the Python that has rips (the view layer). Not the ERT Python."
+            }
+          }
+        },
+        "sumo": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "environment": {
+              "type": "string"
+            }
+          }
+        },
+        "everest": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            }
+          }
+        },
+        "versions": {
+          "$ref": "#/$defs/versions"
+        },
+        "flow_cmd": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "flow_extra_args": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "everest_output_root": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "everest_executable": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ahm_posterior_case": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "everest_max_sims_per_run": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "verified_pins": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ert": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "ropt": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

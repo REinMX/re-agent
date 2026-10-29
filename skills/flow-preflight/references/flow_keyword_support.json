@@ -1,0 +1,4633 @@
+{
+ "schema_version": 1,
+ "source": {
+  "repository": "https://github.com/OPM/opm-simulators",
+  "commit": "c4d038b83b707618a81a6b64bbb2419e5e67a281",
+  "files": {
+   "unsupported": {
+    "path": "opm/simulators/utils/UnsupportedFlowKeywords.cpp",
+    "url": "https://github.com/OPM/opm-simulators/blob/c4d038b83b707618a81a6b64bbb2419e5e67a281/opm/simulators/utils/UnsupportedFlowKeywords.cpp",
+    "sha256": "6e1953ed88c87474156961775ddf85684516a25cb701e15b93134f118d42af46"
+   },
+   "partial": {
+    "path": "opm/simulators/utils/PartiallySupportedFlowKeywords.cpp",
+    "url": "https://github.com/OPM/opm-simulators/blob/c4d038b83b707618a81a6b64bbb2419e5e67a281/opm/simulators/utils/PartiallySupportedFlowKeywords.cpp",
+    "sha256": "f1564d8f0b0e41f01a131b9bbd967b6ac75d41de3e2c58c545edb29c17a21801"
+   }
+  },
+  "license_note": "Facts extracted from OPM opm-simulators source files that are GPL-3.0-or-later (Copyright Equinor and OPM contributors): keyword names, item numbers, allowed values and messages. The C++ files are not copied here."
+ },
+ "item_numbering": "1-based, as in the ECLIPSE manual and OPM KeywordValidation",
+ "rule_semantics": "A rule applies only to an item with an explicit, non-defaulted value. allow: the value must be in the list (an empty list means the item must be defaulted). expr: a Python expression in v that must be true.",
+ "unsupported": {
+  "ACTION": {
+   "critical": true,
+   "message": null
+  },
+  "ACTIONG": {
+   "critical": true,
+   "message": null
+  },
+  "ACTIONR": {
+   "critical": true,
+   "message": null
+  },
+  "ACTIONS": {
+   "critical": true,
+   "message": null
+  },
+  "ACTIONW": {
+   "critical": true,
+   "message": null
+  },
+  "ACTPARAM": {
+   "critical": true,
+   "message": null
+  },
+  "ADSALNOD": {
+   "critical": true,
+   "message": null
+  },
+  "ADSORP": {
+   "critical": true,
+   "message": null
+  },
+  "AIM": {
+   "critical": false,
+   "message": "Flow only supports the fully implicit method and will use it instead"
+  },
+  "AITS": {
+   "critical": false,
+   "message": null
+  },
+  "AITSOFF": {
+   "critical": false,
+   "message": null
+  },
+  "ALKADS": {
+   "critical": true,
+   "message": null
+  },
+  "ALKALINE": {
+   "critical": true,
+   "message": null
+  },
+  "ALKROCK": {
+   "critical": true,
+   "message": null
+  },
+  "ALPOLADS": {
+   "critical": true,
+   "message": null
+  },
+  "ALSURFAD": {
+   "critical": true,
+   "message": null
+  },
+  "ALSURFST": {
+   "critical": true,
+   "message": null
+  },
+  "AMALGAM": {
+   "critical": true,
+   "message": null
+  },
+  "API": {
+   "critical": true,
+   "message": null
+  },
+  "APIGROUP": {
+   "critical": true,
+   "message": null
+  },
+  "APILIM": {
+   "critical": true,
+   "message": null
+  },
+  "APIVD": {
+   "critical": true,
+   "message": null
+  },
+  "AQANCONL": {
+   "critical": true,
+   "message": null
+  },
+  "AQANNC": {
+   "critical": true,
+   "message": null
+  },
+  "AQUALIST": {
+   "critical": true,
+   "message": null
+  },
+  "AQUCHGAS": {
+   "critical": true,
+   "message": null
+  },
+  "AQUCHWAT": {
+   "critical": true,
+   "message": null
+  },
+  "AQUCWFAC": {
+   "critical": true,
+   "message": null
+  },
+  "AQUFET": {
+   "critical": true,
+   "message": "Use the AQUFETP keyword instead"
+  },
+  "AQUNNC": {
+   "critical": true,
+   "message": null
+  },
+  "AUTOCOAR": {
+   "critical": true,
+   "message": null
+  },
+  "AUTOREF": {
+   "critical": true,
+   "message": null
+  },
+  "BDENSITY": {
+   "critical": true,
+   "message": null
+  },
+  "BGGI": {
+   "critical": true,
+   "message": null
+  },
+  "BIGMODEL": {
+   "critical": false,
+   "message": null
+  },
+  "BOGI": {
+   "critical": true,
+   "message": null
+  },
+  "BOUNDARY": {
+   "critical": true,
+   "message": null
+  },
+  "BPARA": {
+   "critical": true,
+   "message": null
+  },
+  "BPIDIMS": {
+   "critical": true,
+   "message": null
+  },
+  "BTOBALFA": {
+   "critical": true,
+   "message": null
+  },
+  "BTOBALFV": {
+   "critical": true,
+   "message": null
+  },
+  "CALTRAC": {
+   "critical": true,
+   "message": null
+  },
+  "CARFIN": {
+   "critical": true,
+   "message": null
+  },
+  "CART": {
+   "critical": true,
+   "message": null
+  },
+  "CBMOPTS": {
+   "critical": true,
+   "message": null
+  },
+  "CECONT": {
+   "critical": true,
+   "message": null
+  },
+  "COAL": {
+   "critical": true,
+   "message": null
+  },
+  "COALADS": {
+   "critical": true,
+   "message": null
+  },
+  "COALNUM": {
+   "critical": true,
+   "message": null
+  },
+  "COALPP": {
+   "critical": true,
+   "message": null
+  },
+  "COARSEN": {
+   "critical": true,
+   "message": null
+  },
+  "COLLAPSE": {
+   "critical": true,
+   "message": null
+  },
+  "COLUMNS": {
+   "critical": true,
+   "message": null
+  },
+  "COMPDATL": {
+   "critical": true,
+   "message": null
+  },
+  "COMPDATM": {
+   "critical": true,
+   "message": null
+  },
+  "COMPDATX": {
+   "critical": true,
+   "message": null
+  },
+  "COMPFLSH": {
+   "critical": true,
+   "message": null
+  },
+  "COMPIMB": {
+   "critical": true,
+   "message": null
+  },
+  "COMPINJK": {
+   "critical": true,
+   "message": null
+  },
+  "COMPLMPL": {
+   "critical": true,
+   "message": null
+  },
+  "COMPOFF": {
+   "critical": true,
+   "message": null
+  },
+  "COMPRIV": {
+   "critical": true,
+   "message": null
+  },
+  "COMPRP": {
+   "critical": true,
+   "message": null
+  },
+  "COMPRPL": {
+   "critical": true,
+   "message": null
+  },
+  "COMPSEGL": {
+   "critical": true,
+   "message": null
+  },
+  "COMPVE": {
+   "critical": true,
+   "message": null
+  },
+  "COMPVEL": {
+   "critical": true,
+   "message": null
+  },
+  "CONNECTION": {
+   "critical": true,
+   "message": null
+  },
+  "CONNECTION_PROBE": {
+   "critical": true,
+   "message": null
+  },
+  "COORDSYS": {
+   "critical": false,
+   "message": "Multiple grid systems not supported, COORDSYS is ignored."
+  },
+  "COPYBOX": {
+   "critical": true,
+   "message": null
+  },
+  "CPIFACT": {
+   "critical": true,
+   "message": null
+  },
+  "CPIFACTL": {
+   "critical": true,
+   "message": null
+  },
+  "CRITPERM": {
+   "critical": true,
+   "message": null
+  },
+  "CVCRIT": {
+   "critical": false,
+   "message": null
+  },
+  "DCQDEFN": {
+   "critical": true,
+   "message": null
+  },
+  "DEBUG": {
+   "critical": false,
+   "message": null
+  },
+  "DELAYACT": {
+   "critical": true,
+   "message": null
+  },
+  "DEPTHTAB": {
+   "critical": true,
+   "message": null
+  },
+  "DIAGDISP": {
+   "critical": true,
+   "message": null
+  },
+  "DIFF": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFCOAL": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFDP": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMMF": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMR": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMR-": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMTH-": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMTHT": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMX": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMX-": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMY": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMY-": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMZ": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFMZ-": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFR": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFTHT": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFX": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFY": {
+   "critical": true,
+   "message": null
+  },
+  "DIFFZ": {
+   "critical": true,
+   "message": null
+  },
+  "DIMPES": {
+   "critical": true,
+   "message": null
+  },
+  "DIMPLICT": {
+   "critical": true,
+   "message": null
+  },
+  "DISPDIMS": {
+   "critical": true,
+   "message": null
+  },
+  "DISPERSE": {
+   "critical": true,
+   "message": null
+  },
+  "DOMAINS": {
+   "critical": true,
+   "message": null
+  },
+  "DPGRID": {
+   "critical": true,
+   "message": null
+  },
+  "DPKRMOD": {
+   "critical": true,
+   "message": null
+  },
+  "DPNUM": {
+   "critical": true,
+   "message": null
+  },
+  "DR": {
+   "critical": true,
+   "message": "Use the DRV keyword instead"
+  },
+  "DRILPRI": {
+   "critical": true,
+   "message": null
+  },
+  "DSPDEINT": {
+   "critical": true,
+   "message": null
+  },
+  "DTHETA": {
+   "critical": true,
+   "message": "Use the DTHETAV keyword instead"
+  },
+  "DUALPERM": {
+   "critical": true,
+   "message": null
+  },
+  "DUALPORO": {
+   "critical": true,
+   "message": null
+  },
+  "DUMPCUPL": {
+   "critical": true,
+   "message": null
+  },
+  "DUMPFLUX": {
+   "critical": true,
+   "message": null
+  },
+  "DYNAMICR": {
+   "critical": true,
+   "message": null
+  },
+  "DYNRDIMS": {
+   "critical": true,
+   "message": null
+  },
+  "DZMATRIX": {
+   "critical": true,
+   "message": null
+  },
+  "DZMTRX": {
+   "critical": true,
+   "message": null
+  },
+  "DZMTRXV": {
+   "critical": true,
+   "message": null
+  },
+  "DZNET": {
+   "critical": true,
+   "message": null
+  },
+  "ECHO": {
+   "critical": false,
+   "message": null
+  },
+  "ECLMC": {
+   "critical": true,
+   "message": null
+  },
+  "EHYSTRR": {
+   "critical": true,
+   "message": null
+  },
+  "ENDDYN": {
+   "critical": true,
+   "message": null
+  },
+  "ENDFIN": {
+   "critical": true,
+   "message": null
+  },
+  "ENDNUM": {
+   "critical": true,
+   "message": null
+  },
+  "ENKRVD": {
+   "critical": true,
+   "message": null
+  },
+  "ENKSRVD": {
+   "critical": true,
+   "message": null
+  },
+  "ENPCVD": {
+   "critical": true,
+   "message": null
+  },
+  "ENPTVD": {
+   "critical": true,
+   "message": null
+  },
+  "ENSPCVD": {
+   "critical": true,
+   "message": null
+  },
+  "EPSDBGS": {
+   "critical": false,
+   "message": null
+  },
+  "EPSDEBUG": {
+   "critical": false,
+   "message": null
+  },
+  "EQLZCORN": {
+   "critical": true,
+   "message": null
+  },
+  "ESSNODE": {
+   "critical": true,
+   "message": null
+  },
+  "EXCAVATE": {
+   "critical": true,
+   "message": null
+  },
+  "EXCEL": {
+   "critical": false,
+   "message": null
+  },
+  "EXTFIN": {
+   "critical": true,
+   "message": null
+  },
+  "EXTHOST": {
+   "critical": true,
+   "message": null
+  },
+  "EXTRAPMS": {
+   "critical": false,
+   "message": null
+  },
+  "EXTREPGL": {
+   "critical": true,
+   "message": null
+  },
+  "FHERCHBL": {
+   "critical": true,
+   "message": null
+  },
+  "FIELDSEP": {
+   "critical": false,
+   "message": null
+  },
+  "FIPOWG": {
+   "critical": false,
+   "message": "Report not available"
+  },
+  "FIPSEP": {
+   "critical": true,
+   "message": null
+  },
+  "FLUXREG": {
+   "critical": true,
+   "message": null
+  },
+  "FLUXTYPE": {
+   "critical": true,
+   "message": null
+  },
+  "FMTHMD": {
+   "critical": true,
+   "message": null
+  },
+  "FOAMDCYO": {
+   "critical": true,
+   "message": null
+  },
+  "FOAMDCYW": {
+   "critical": true,
+   "message": null
+  },
+  "FOAMFCN": {
+   "critical": true,
+   "message": null
+  },
+  "FOAMFRM": {
+   "critical": true,
+   "message": null
+  },
+  "FOAMFSO": {
+   "critical": true,
+   "message": null
+  },
+  "FOAMFST": {
+   "critical": true,
+   "message": null
+  },
+  "FOAMFSW": {
+   "critical": true,
+   "message": null
+  },
+  "FOAMMOBP": {
+   "critical": true,
+   "message": null
+  },
+  "FOAMMOBS": {
+   "critical": true,
+   "message": null
+  },
+  "FORMFEED": {
+   "critical": true,
+   "message": null
+  },
+  "FRICTION": {
+   "critical": true,
+   "message": null
+  },
+  "GASBEGIN": {
+   "critical": true,
+   "message": null
+  },
+  "GASCONC": {
+   "critical": true,
+   "message": null
+  },
+  "GASEND": {
+   "critical": true,
+   "message": null
+  },
+  "GASFCOMP": {
+   "critical": true,
+   "message": null
+  },
+  "GASFDECR": {
+   "critical": true,
+   "message": null
+  },
+  "GASFDELC": {
+   "critical": true,
+   "message": null
+  },
+  "GASFIELD": {
+   "critical": true,
+   "message": null
+  },
+  "GASFTARG": {
+   "critical": true,
+   "message": null
+  },
+  "GASMONTH": {
+   "critical": true,
+   "message": null
+  },
+  "GASPERIO": {
+   "critical": true,
+   "message": null
+  },
+  "GASSATC": {
+   "critical": true,
+   "message": null
+  },
+  "GASWAT": {
+   "critical": false,
+   "message": null
+  },
+  "GASYEAR": {
+   "critical": true,
+   "message": null
+  },
+  "GCALECON": {
+   "critical": true,
+   "message": null
+  },
+  "GCONCAL": {
+   "critical": true,
+   "message": null
+  },
+  "GCONENG": {
+   "critical": true,
+   "message": null
+  },
+  "GCONPRI": {
+   "critical": true,
+   "message": null
+  },
+  "GCONTOL": {
+   "critical": true,
+   "message": null
+  },
+  "GCUTBACK": {
+   "critical": true,
+   "message": null
+  },
+  "GCUTBACT": {
+   "critical": true,
+   "message": null
+  },
+  "GCVD": {
+   "critical": true,
+   "message": null
+  },
+  "GDCQ": {
+   "critical": true,
+   "message": null
+  },
+  "GDCQECON": {
+   "critical": true,
+   "message": null
+  },
+  "GDIMS": {
+   "critical": true,
+   "message": null
+  },
+  "GDORIENT": {
+   "critical": false,
+   "message": null
+  },
+  "GDRILPOT": {
+   "critical": true,
+   "message": null
+  },
+  "GECONT": {
+   "critical": true,
+   "message": null
+  },
+  "GEGONT": {
+   "critical": true,
+   "message": null
+  },
+  "GETDATA": {
+   "critical": true,
+   "message": null
+  },
+  "GETGLOB": {
+   "critical": true,
+   "message": null
+  },
+  "GI": {
+   "critical": true,
+   "message": null
+  },
+  "GIALL": {
+   "critical": true,
+   "message": null
+  },
+  "GIMODEL": {
+   "critical": true,
+   "message": null
+  },
+  "GINJGAS": {
+   "critical": false,
+   "message": null
+  },
+  "GINODE": {
+   "critical": true,
+   "message": null
+  },
+  "GLIFTLIM": {
+   "critical": true,
+   "message": null
+  },
+  "GNETDP": {
+   "critical": true,
+   "message": null
+  },
+  "GNETINJE": {
+   "critical": true,
+   "message": null
+  },
+  "GNETPUMP": {
+   "critical": true,
+   "message": null
+  },
+  "GRADGRUP": {
+   "critical": true,
+   "message": null
+  },
+  "GRADRESV": {
+   "critical": true,
+   "message": null
+  },
+  "GRADRFT": {
+   "critical": true,
+   "message": null
+  },
+  "GRADWELL": {
+   "critical": true,
+   "message": null
+  },
+  "GRAVCONS": {
+   "critical": true,
+   "message": null
+  },
+  "GRAVDR": {
+   "critical": true,
+   "message": null
+  },
+  "GRAVDRB": {
+   "critical": true,
+   "message": null
+  },
+  "GRAVDRM": {
+   "critical": true,
+   "message": null
+  },
+  "GRDREACH": {
+   "critical": true,
+   "message": null
+  },
+  "GRUPMAST": {
+   "critical": true,
+   "message": null
+  },
+  "GRUPRIG": {
+   "critical": true,
+   "message": null
+  },
+  "GRUPSLAV": {
+   "critical": true,
+   "message": null
+  },
+  "GRUPTARG": {
+   "critical": true,
+   "message": null
+  },
+  "GSEPCOND": {
+   "critical": true,
+   "message": null
+  },
+  "GSSCPTST": {
+   "critical": true,
+   "message": null
+  },
+  "GSWINGF": {
+   "critical": true,
+   "message": null
+  },
+  "GTADD": {
+   "critical": true,
+   "message": null
+  },
+  "GTMULT": {
+   "critical": true,
+   "message": null
+  },
+  "GUIDECAL": {
+   "critical": true,
+   "message": null
+  },
+  "GUPFREQ": {
+   "critical": true,
+   "message": null
+  },
+  "GWRTWCV": {
+   "critical": true,
+   "message": null
+  },
+  "HALFTRAN": {
+   "critical": true,
+   "message": null
+  },
+  "HBNUM": {
+   "critical": true,
+   "message": null
+  },
+  "HDISP": {
+   "critical": true,
+   "message": null
+  },
+  "HMAQUCT": {
+   "critical": true,
+   "message": null
+  },
+  "HMAQUFET": {
+   "critical": true,
+   "message": null
+  },
+  "HMAQUNUM": {
+   "critical": true,
+   "message": null
+  },
+  "HMDIMS": {
+   "critical": true,
+   "message": null
+  },
+  "HMFAULTS": {
+   "critical": true,
+   "message": null
+  },
+  "HMMLAQUN": {
+   "critical": true,
+   "message": null
+  },
+  "HMMLCTAQ": {
+   "critical": true,
+   "message": null
+  },
+  "HMMLFTAQ": {
+   "critical": true,
+   "message": null
+  },
+  "HMMLTWCN": {
+   "critical": true,
+   "message": null
+  },
+  "HMMULTFT": {
+   "critical": true,
+   "message": null
+  },
+  "HMMULTSG": {
+   "critical": true,
+   "message": null
+  },
+  "HMPROPS": {
+   "critical": true,
+   "message": null
+  },
+  "HMROCK": {
+   "critical": true,
+   "message": null
+  },
+  "HMROCKT": {
+   "critical": true,
+   "message": null
+  },
+  "HMRREF": {
+   "critical": true,
+   "message": null
+  },
+  "HMWELCON": {
+   "critical": true,
+   "message": null
+  },
+  "HMWPIMLT": {
+   "critical": true,
+   "message": null
+  },
+  "HRFIN": {
+   "critical": true,
+   "message": null
+  },
+  "HWELLS": {
+   "critical": false,
+   "message": null
+  },
+  "HWKRO": {
+   "critical": true,
+   "message": null
+  },
+  "HWKRORG": {
+   "critical": true,
+   "message": null
+  },
+  "HWKRORW": {
+   "critical": true,
+   "message": null
+  },
+  "HWKRW": {
+   "critical": true,
+   "message": null
+  },
+  "HWKRWR": {
+   "critical": true,
+   "message": null
+  },
+  "HWPCW": {
+   "critical": true,
+   "message": null
+  },
+  "HWSNUM": {
+   "critical": true,
+   "message": null
+  },
+  "HWSOGCR": {
+   "critical": true,
+   "message": null
+  },
+  "HWSOWCR": {
+   "critical": true,
+   "message": null
+  },
+  "HWSWCR": {
+   "critical": true,
+   "message": null
+  },
+  "HWSWL": {
+   "critical": true,
+   "message": null
+  },
+  "HWSWLPC": {
+   "critical": true,
+   "message": null
+  },
+  "HWSWU": {
+   "critical": true,
+   "message": null
+  },
+  "HXFIN": {
+   "critical": true,
+   "message": null
+  },
+  "HYDRHEAD": {
+   "critical": true,
+   "message": null
+  },
+  "HYFIN": {
+   "critical": true,
+   "message": null
+  },
+  "HYMOBGDR": {
+   "critical": true,
+   "message": null
+  },
+  "HYST": {
+   "critical": true,
+   "message": null
+  },
+  "HYSTCHCK": {
+   "critical": true,
+   "message": null
+  },
+  "HZFIN": {
+   "critical": true,
+   "message": null
+  },
+  "IHOST": {
+   "critical": true,
+   "message": null
+  },
+  "IMBNUMMF": {
+   "critical": true,
+   "message": null
+  },
+  "IMKRVD": {
+   "critical": true,
+   "message": null
+  },
+  "IMPCVD": {
+   "critical": true,
+   "message": null
+  },
+  "IMPES": {
+   "critical": false,
+   "message": "Flow only supports the fully implicit method and will use it instead"
+  },
+  "IMPLICIT": {
+   "critical": true,
+   "message": null
+  },
+  "IMPTVD": {
+   "critical": true,
+   "message": null
+  },
+  "IMSPCVD": {
+   "critical": true,
+   "message": null
+  },
+  "INSPEC": {
+   "critical": true,
+   "message": null
+  },
+  "INTPC": {
+   "critical": true,
+   "message": null
+  },
+  "IONROCK": {
+   "critical": true,
+   "message": null
+  },
+  "IONXROCK": {
+   "critical": true,
+   "message": null
+  },
+  "IONXSURF": {
+   "critical": true,
+   "message": null
+  },
+  "ISOLNUM": {
+   "critical": true,
+   "message": null
+  },
+  "JFUNCR": {
+   "critical": true,
+   "message": null
+  },
+  "KRNUMMF": {
+   "critical": true,
+   "message": null
+  },
+  "KRNUMR-": {
+   "critical": true,
+   "message": null
+  },
+  "KRNUMT-": {
+   "critical": true,
+   "message": null
+  },
+  "KRNUMX-": {
+   "critical": true,
+   "message": null
+  },
+  "KRNUMY-": {
+   "critical": true,
+   "message": null
+  },
+  "KRNUMZ-": {
+   "critical": true,
+   "message": null
+  },
+  "LANGMPL": {
+   "critical": true,
+   "message": null
+  },
+  "LANGMUIR": {
+   "critical": true,
+   "message": null
+  },
+  "LANGSOLV": {
+   "critical": true,
+   "message": null
+  },
+  "LCUNIT": {
+   "critical": true,
+   "message": null
+  },
+  "LGR": {
+   "critical": true,
+   "message": null
+  },
+  "LGRCOPY": {
+   "critical": true,
+   "message": null
+  },
+  "LGRFREE": {
+   "critical": true,
+   "message": null
+  },
+  "LGRLOCK": {
+   "critical": true,
+   "message": null
+  },
+  "LGROFF": {
+   "critical": true,
+   "message": null
+  },
+  "LGRON": {
+   "critical": true,
+   "message": null
+  },
+  "LICENSES": {
+   "critical": false,
+   "message": "Flow does not check out licences, LICENSES is ignored"
+  },
+  "LINCOM": {
+   "critical": true,
+   "message": null
+  },
+  "LINKPERM": {
+   "critical": true,
+   "message": null
+  },
+  "LKRO": {
+   "critical": true,
+   "message": null
+  },
+  "LKRORG": {
+   "critical": true,
+   "message": null
+  },
+  "LKRORW": {
+   "critical": true,
+   "message": null
+  },
+  "LKRW": {
+   "critical": true,
+   "message": null
+  },
+  "LKRWR": {
+   "critical": true,
+   "message": null
+  },
+  "LOAD": {
+   "critical": true,
+   "message": null
+  },
+  "LOWSALT": {
+   "critical": true,
+   "message": null
+  },
+  "LPCW": {
+   "critical": true,
+   "message": null
+  },
+  "LSALTFNC": {
+   "critical": true,
+   "message": null
+  },
+  "LSLTWNUM": {
+   "critical": true,
+   "message": null
+  },
+  "LSNUM": {
+   "critical": true,
+   "message": null
+  },
+  "LSOGCR": {
+   "critical": true,
+   "message": null
+  },
+  "LSOWCR": {
+   "critical": true,
+   "message": null
+  },
+  "LSWCR": {
+   "critical": true,
+   "message": null
+  },
+  "LSWL": {
+   "critical": true,
+   "message": null
+  },
+  "LSWLPC": {
+   "critical": true,
+   "message": null
+  },
+  "LSWU": {
+   "critical": true,
+   "message": null
+  },
+  "LTOSIGMA": {
+   "critical": true,
+   "message": null
+  },
+  "LWKRO": {
+   "critical": true,
+   "message": null
+  },
+  "LWKRORG": {
+   "critical": true,
+   "message": null
+  },
+  "LWKRORW": {
+   "critical": true,
+   "message": null
+  },
+  "LWKRW": {
+   "critical": true,
+   "message": null
+  },
+  "LWKRWR": {
+   "critical": true,
+   "message": null
+  },
+  "LWPCW": {
+   "critical": true,
+   "message": null
+  },
+  "LWSLTNUM": {
+   "critical": true,
+   "message": null
+  },
+  "LWSNUM": {
+   "critical": true,
+   "message": null
+  },
+  "LWSOGCR": {
+   "critical": true,
+   "message": null
+  },
+  "LWSOWCR": {
+   "critical": true,
+   "message": null
+  },
+  "LWSWCR": {
+   "critical": true,
+   "message": null
+  },
+  "LWSWL": {
+   "critical": true,
+   "message": null
+  },
+  "LWSWLPC": {
+   "critical": true,
+   "message": null
+  },
+  "LWSWU": {
+   "critical": true,
+   "message": null
+  },
+  "LX": {
+   "critical": true,
+   "message": null
+  },
+  "LXFIN": {
+   "critical": true,
+   "message": null
+  },
+  "LY": {
+   "critical": true,
+   "message": null
+  },
+  "LYFIN": {
+   "critical": true,
+   "message": null
+  },
+  "LZ": {
+   "critical": true,
+   "message": null
+  },
+  "LZFIN": {
+   "critical": true,
+   "message": null
+  },
+  "MASSFLOW": {
+   "critical": true,
+   "message": null
+  },
+  "MATCORR": {
+   "critical": true,
+   "message": null
+  },
+  "MEMORY": {
+   "critical": false,
+   "message": null
+  },
+  "MESSAGE": {
+   "critical": false,
+   "message": null
+  },
+  "MESSOPTS": {
+   "critical": false,
+   "message": null
+  },
+  "MESSSRVC": {
+   "critical": true,
+   "message": null
+  },
+  "MINNNCT": {
+   "critical": true,
+   "message": null
+  },
+  "MLANG": {
+   "critical": true,
+   "message": null
+  },
+  "MLANGSLV": {
+   "critical": true,
+   "message": null
+  },
+  "MONITOR": {
+   "critical": false,
+   "message": null
+  },
+  "MPFANUM": {
+   "critical": true,
+   "message": null
+  },
+  "MPFNNC": {
+   "critical": true,
+   "message": null
+  },
+  "MSGFILE": {
+   "critical": false,
+   "message": null
+  },
+  "MULSGGD": {
+   "critical": true,
+   "message": null
+  },
+  "MULSGGDV": {
+   "critical": true,
+   "message": null
+  },
+  "MULTOUTS": {
+   "critical": true,
+   "message": null
+  },
+  "MULTREAL": {
+   "critical": true,
+   "message": null
+  },
+  "MULTREGD": {
+   "critical": true,
+   "message": null
+  },
+  "MULTREGH": {
+   "critical": true,
+   "message": null
+  },
+  "MULTSIG": {
+   "critical": true,
+   "message": null
+  },
+  "MULTSIGV": {
+   "critical": true,
+   "message": null
+  },
+  "MULT_XYZ": {
+   "critical": true,
+   "message": null
+  },
+  "NARROW": {
+   "critical": true,
+   "message": null
+  },
+  "NCONSUMP": {
+   "critical": true,
+   "message": null
+  },
+  "NETCOMPA": {
+   "critical": true,
+   "message": null
+  },
+  "NEXT": {
+   "critical": false,
+   "message": null
+  },
+  "NEXTSTPL": {
+   "critical": true,
+   "message": null
+  },
+  "NINENUM": {
+   "critical": true,
+   "message": null
+  },
+  "NINEPOIN": {
+   "critical": true,
+   "message": null
+  },
+  "NMATOPTS": {
+   "critical": true,
+   "message": null
+  },
+  "NMATRIX": {
+   "critical": true,
+   "message": null
+  },
+  "NNEWTF": {
+   "critical": true,
+   "message": null
+  },
+  "NOCASC": {
+   "critical": true,
+   "message": null
+  },
+  "NODPPM": {
+   "critical": true,
+   "message": null
+  },
+  "NOECHO": {
+   "critical": false,
+   "message": null
+  },
+  "NOGGF": {
+   "critical": true,
+   "message": null
+  },
+  "NOHMD": {
+   "critical": true,
+   "message": null
+  },
+  "NOHMO": {
+   "critical": true,
+   "message": null
+  },
+  "NOHYST": {
+   "critical": true,
+   "message": null
+  },
+  "NOINSPEC": {
+   "critical": false,
+   "message": null
+  },
+  "NOMONITO": {
+   "critical": true,
+   "message": null
+  },
+  "NORSSPEC": {
+   "critical": false,
+   "message": null
+  },
+  "NOWARN": {
+   "critical": false,
+   "message": null
+  },
+  "NOWARNEP": {
+   "critical": false,
+   "message": null
+  },
+  "NRSOUT": {
+   "critical": true,
+   "message": null
+  },
+  "NSTACK": {
+   "critical": false,
+   "message": null
+  },
+  "NWATREM": {
+   "critical": true,
+   "message": null
+  },
+  "NXFIN": {
+   "critical": true,
+   "message": null
+  },
+  "NYFIN": {
+   "critical": true,
+   "message": null
+  },
+  "NZFIN": {
+   "critical": true,
+   "message": null
+  },
+  "OFM": {
+   "critical": true,
+   "message": null
+  },
+  "OILAPI": {
+   "critical": true,
+   "message": null
+  },
+  "OLDTRAN": {
+   "critical": true,
+   "message": null
+  },
+  "OLDTRANR": {
+   "critical": true,
+   "message": null
+  },
+  "OPTIONS": {
+   "critical": true,
+   "message": null
+  },
+  "OUTRAD": {
+   "critical": true,
+   "message": "Use the DRV keyword instead"
+  },
+  "OUTSOL": {
+   "critical": false,
+   "message": null
+  },
+  "PARALLEL": {
+   "critical": false,
+   "message": null
+  },
+  "PARAOPTS": {
+   "critical": false,
+   "message": null
+  },
+  "PARTTRAC": {
+   "critical": true,
+   "message": null
+  },
+  "PBUB": {
+   "critical": true,
+   "message": null
+  },
+  "PCG": {
+   "critical": true,
+   "message": null
+  },
+  "PCG32D": {
+   "critical": true,
+   "message": null
+  },
+  "PCW": {
+   "critical": true,
+   "message": null
+  },
+  "PCW32D": {
+   "critical": true,
+   "message": null
+  },
+  "PDEW": {
+   "critical": true,
+   "message": null
+  },
+  "PEBI": {
+   "critical": true,
+   "message": null
+  },
+  "PECOEFS": {
+   "critical": true,
+   "message": null
+  },
+  "PEDIMS": {
+   "critical": true,
+   "message": null
+  },
+  "PEGTABX": {
+   "critical": true,
+   "message": null
+  },
+  "PEKTABX": {
+   "critical": true,
+   "message": null
+  },
+  "PENUM": {
+   "critical": true,
+   "message": null
+  },
+  "PERMAVE": {
+   "critical": true,
+   "message": null
+  },
+  "PERMJFUN": {
+   "critical": true,
+   "message": null
+  },
+  "PERMXY": {
+   "critical": true,
+   "message": null
+  },
+  "PERMYZ": {
+   "critical": true,
+   "message": null
+  },
+  "PERMZX": {
+   "critical": true,
+   "message": null
+  },
+  "PETGRID": {
+   "critical": true,
+   "message": "OPM Flow cannot read GSG format grid input, re-export case from Petrel using GRDECL instead."
+  },
+  "PETOPTS": {
+   "critical": true,
+   "message": null
+  },
+  "PICOND": {
+   "critical": true,
+   "message": null
+  },
+  "PIMULTAB": {
+   "critical": true,
+   "message": null
+  },
+  "PINCHNUM": {
+   "critical": true,
+   "message": null
+  },
+  "PINCHOUT": {
+   "critical": true,
+   "message": null
+  },
+  "PINCHREG": {
+   "critical": true,
+   "message": null
+  },
+  "PINCHXY": {
+   "critical": true,
+   "message": null
+  },
+  "PLYADSS": {
+   "critical": true,
+   "message": null
+  },
+  "PLYATEMP": {
+   "critical": true,
+   "message": null
+  },
+  "PLYCAMAX": {
+   "critical": true,
+   "message": null
+  },
+  "PLYDHFLF": {
+   "critical": true,
+   "message": null
+  },
+  "PLYESAL": {
+   "critical": true,
+   "message": null
+  },
+  "PLYKRRF": {
+   "critical": true,
+   "message": null
+  },
+  "PLYOPTS": {
+   "critical": true,
+   "message": null
+  },
+  "PLYRMDEN": {
+   "critical": true,
+   "message": null
+  },
+  "PLYROCKM": {
+   "critical": true,
+   "message": null
+  },
+  "PLYSHEAR": {
+   "critical": true,
+   "message": null
+  },
+  "PLYTRRF": {
+   "critical": true,
+   "message": null
+  },
+  "PLYTRRFA": {
+   "critical": true,
+   "message": null
+  },
+  "PLYVISCS": {
+   "critical": true,
+   "message": null
+  },
+  "PLYVISCT": {
+   "critical": true,
+   "message": null
+  },
+  "PLYVSCST": {
+   "critical": true,
+   "message": null
+  },
+  "PMAX": {
+   "critical": true,
+   "message": null
+  },
+  "PRIORITY": {
+   "critical": true,
+   "message": null
+  },
+  "PRORDER": {
+   "critical": true,
+   "message": null
+  },
+  "PRTRST": {
+   "critical": true,
+   "message": null
+  },
+  "PRVD": {
+   "critical": true,
+   "message": null
+  },
+  "PSTEADY": {
+   "critical": true,
+   "message": null
+  },
+  "PSWRG": {
+   "critical": true,
+   "message": null
+  },
+  "PSWRO": {
+   "critical": true,
+   "message": null
+  },
+  "PVCO": {
+   "critical": true,
+   "message": null
+  },
+  "PVTGWO": {
+   "critical": true,
+   "message": null
+  },
+  "PVZG": {
+   "critical": true,
+   "message": null
+  },
+  "QDRILL": {
+   "critical": true,
+   "message": null
+  },
+  "QHRATING": {
+   "critical": true,
+   "message": null
+  },
+  "QMOBIL": {
+   "critical": true,
+   "message": null
+  },
+  "RADFIN": {
+   "critical": true,
+   "message": null
+  },
+  "RADFIN4": {
+   "critical": true,
+   "message": null
+  },
+  "RAINFALL": {
+   "critical": true,
+   "message": null
+  },
+  "RBEDCONT": {
+   "critical": true,
+   "message": null
+  },
+  "RCMASTS": {
+   "critical": true,
+   "message": null
+  },
+  "REACACT": {
+   "critical": true,
+   "message": null
+  },
+  "REACHES": {
+   "critical": true,
+   "message": null
+  },
+  "READDATA": {
+   "critical": true,
+   "message": null
+  },
+  "REFINE": {
+   "critical": true,
+   "message": null
+  },
+  "RESIDNUM": {
+   "critical": true,
+   "message": null
+  },
+  "RESVNUM": {
+   "critical": true,
+   "message": null
+  },
+  "RHO": {
+   "critical": true,
+   "message": null
+  },
+  "RIVDEBUG": {
+   "critical": true,
+   "message": null
+  },
+  "RIVERSYS": {
+   "critical": true,
+   "message": null
+  },
+  "RIVRDIMS": {
+   "critical": true,
+   "message": null
+  },
+  "RIVRPROP": {
+   "critical": true,
+   "message": null
+  },
+  "RIVRXSE": {
+   "critical": true,
+   "message": null
+  },
+  "RIVRXSEC": {
+   "critical": true,
+   "message": null
+  },
+  "RIVSALT": {
+   "critical": true,
+   "message": null
+  },
+  "RIVTRACE": {
+   "critical": true,
+   "message": null
+  },
+  "RKTRMDIR": {
+   "critical": true,
+   "message": null
+  },
+  "ROCKFRAC": {
+   "critical": true,
+   "message": null
+  },
+  "ROCKPAMA": {
+   "critical": true,
+   "message": null
+  },
+  "ROCKTABW": {
+   "critical": true,
+   "message": null
+  },
+  "ROCKTHSG": {
+   "critical": true,
+   "message": null
+  },
+  "ROCKTSIG": {
+   "critical": true,
+   "message": null
+  },
+  "ROCKV": {
+   "critical": true,
+   "message": null
+  },
+  "RPTCPL": {
+   "critical": false,
+   "message": null
+  },
+  "RPTGRID": {
+   "critical": false,
+   "message": null
+  },
+  "RPTGRIDL": {
+   "critical": false,
+   "message": null
+  },
+  "RPTHM": {
+   "critical": false,
+   "message": null
+  },
+  "RPTHMD": {
+   "critical": false,
+   "message": null
+  },
+  "RPTHMG": {
+   "critical": false,
+   "message": null
+  },
+  "RPTHMW": {
+   "critical": false,
+   "message": null
+  },
+  "RPTINIT": {
+   "critical": false,
+   "message": null
+  },
+  "RPTISOL": {
+   "critical": false,
+   "message": null
+  },
+  "RPTPROPS": {
+   "critical": false,
+   "message": null
+  },
+  "RPTPROS": {
+   "critical": true,
+   "message": null
+  },
+  "RPTREGS": {
+   "critical": false,
+   "message": null
+  },
+  "RPTRUNSP": {
+   "critical": false,
+   "message": null
+  },
+  "RPTSMRY": {
+   "critical": false,
+   "message": null
+  },
+  "RPTSOL": {
+   "critical": false,
+   "message": null
+  },
+  "RSCONSTT": {
+   "critical": true,
+   "message": null
+  },
+  "RSGI": {
+   "critical": true,
+   "message": null
+  },
+  "RSSPE": {
+   "critical": true,
+   "message": null
+  },
+  "RSSPEC": {
+   "critical": true,
+   "message": null
+  },
+  "RSSSPEC": {
+   "critical": false,
+   "message": null
+  },
+  "RVCONST": {
+   "critical": true,
+   "message": null
+  },
+  "RVCONSTT": {
+   "critical": true,
+   "message": null
+  },
+  "RVGI": {
+   "critical": true,
+   "message": null
+  },
+  "SALTNODE": {
+   "critical": true,
+   "message": null
+  },
+  "SALTREST": {
+   "critical": true,
+   "message": null
+  },
+  "SAMG": {
+   "critical": true,
+   "message": null
+  },
+  "SAVE": {
+   "critical": false,
+   "message": null
+  },
+  "SCALELIM": {
+   "critical": true,
+   "message": null
+  },
+  "SCDATAB": {
+   "critical": true,
+   "message": null
+  },
+  "SCDETAB": {
+   "critical": true,
+   "message": null
+  },
+  "SCDPDIMS": {
+   "critical": true,
+   "message": null
+  },
+  "SCDPTAB": {
+   "critical": true,
+   "message": null
+  },
+  "SCDPTRAC": {
+   "critical": true,
+   "message": null
+  },
+  "SCVD": {
+   "critical": true,
+   "message": null
+  },
+  "SEPVALS": {
+   "critical": true,
+   "message": null
+  },
+  "SFOAM": {
+   "critical": true,
+   "message": null
+  },
+  "SGF32D": {
+   "critical": true,
+   "message": null
+  },
+  "SIGMA": {
+   "critical": true,
+   "message": null
+  },
+  "SIGMAGD": {
+   "critical": true,
+   "message": null
+  },
+  "SIGMAGDV": {
+   "critical": true,
+   "message": null
+  },
+  "SIGMATH": {
+   "critical": true,
+   "message": null
+  },
+  "SIGMAV": {
+   "critical": true,
+   "message": null
+  },
+  "SIMULATE": {
+   "critical": true,
+   "message": null
+  },
+  "SKRO": {
+   "critical": true,
+   "message": null
+  },
+  "SKRORG": {
+   "critical": true,
+   "message": null
+  },
+  "SKRORW": {
+   "critical": true,
+   "message": null
+  },
+  "SKRW": {
+   "critical": true,
+   "message": null
+  },
+  "SKRWR": {
+   "critical": true,
+   "message": null
+  },
+  "SLAVES": {
+   "critical": true,
+   "message": null
+  },
+  "SMULTX": {
+   "critical": true,
+   "message": null
+  },
+  "SMULTY": {
+   "critical": true,
+   "message": null
+  },
+  "SMULTZ": {
+   "critical": true,
+   "message": null
+  },
+  "SOCRS": {
+   "critical": true,
+   "message": null
+  },
+  "SOF32D": {
+   "critical": true,
+   "message": null
+  },
+  "SOLID": {
+   "critical": false,
+   "message": null
+  },
+  "SOLVCONC": {
+   "critical": true,
+   "message": null
+  },
+  "SOLVDIMS": {
+   "critical": true,
+   "message": null
+  },
+  "SOLVDIRS": {
+   "critical": false,
+   "message": null
+  },
+  "SOLVFRAC": {
+   "critical": true,
+   "message": null
+  },
+  "SOLVNUM": {
+   "critical": true,
+   "message": null
+  },
+  "SOLWNUM": {
+   "critical": true,
+   "message": null
+  },
+  "SOMGAS": {
+   "critical": true,
+   "message": null
+  },
+  "SOMWAT": {
+   "critical": true,
+   "message": null
+  },
+  "SSGCR": {
+   "critical": true,
+   "message": null
+  },
+  "SSGL": {
+   "critical": true,
+   "message": null
+  },
+  "SSOGCR": {
+   "critical": true,
+   "message": null
+  },
+  "SSOWCR": {
+   "critical": true,
+   "message": null
+  },
+  "SSWCR": {
+   "critical": true,
+   "message": null
+  },
+  "SSWL": {
+   "critical": true,
+   "message": null
+  },
+  "SSWU": {
+   "critical": true,
+   "message": null
+  },
+  "STOG": {
+   "critical": true,
+   "message": null
+  },
+  "STOW": {
+   "critical": true,
+   "message": null
+  },
+  "STWG": {
+   "critical": true,
+   "message": null
+  },
+  "SURF": {
+   "critical": true,
+   "message": null
+  },
+  "SURFACT": {
+   "critical": true,
+   "message": null
+  },
+  "SURFACTW": {
+   "critical": true,
+   "message": null
+  },
+  "SURFADDW": {
+   "critical": true,
+   "message": null
+  },
+  "SURFADS": {
+   "critical": true,
+   "message": null
+  },
+  "SURFCAPD": {
+   "critical": true,
+   "message": null
+  },
+  "SURFESAL": {
+   "critical": true,
+   "message": null
+  },
+  "SURFNUM": {
+   "critical": true,
+   "message": null
+  },
+  "SURFOPTS": {
+   "critical": true,
+   "message": null
+  },
+  "SURFROCK": {
+   "critical": true,
+   "message": null
+  },
+  "SURFST": {
+   "critical": true,
+   "message": null
+  },
+  "SURFSTES": {
+   "critical": true,
+   "message": null
+  },
+  "SURFVISC": {
+   "critical": true,
+   "message": null
+  },
+  "SURFWNUM": {
+   "critical": true,
+   "message": null
+  },
+  "SWF32D": {
+   "critical": true,
+   "message": null
+  },
+  "SWINGFAC": {
+   "critical": true,
+   "message": null
+  },
+  "TEMPNODE": {
+   "critical": true,
+   "message": null
+  },
+  "TEMPTVD": {
+   "critical": true,
+   "message": null
+  },
+  "TIGHTEN": {
+   "critical": true,
+   "message": null
+  },
+  "TIGHTENP": {
+   "critical": true,
+   "message": null
+  },
+  "TIME": {
+   "critical": true,
+   "message": null
+  },
+  "TNUM": {
+   "critical": true,
+   "message": null
+  },
+  "TPAMEPS": {
+   "critical": true,
+   "message": null
+  },
+  "TPAMEPSS": {
+   "critical": true,
+   "message": null
+  },
+  "TRACERKM": {
+   "critical": true,
+   "message": null
+  },
+  "TRACERKP": {
+   "critical": true,
+   "message": null
+  },
+  "TRACITVD": {
+   "critical": true,
+   "message": null
+  },
+  "TRACTVD": {
+   "critical": true,
+   "message": null
+  },
+  "TRADS": {
+   "critical": true,
+   "message": null
+  },
+  "TRANGL": {
+   "critical": true,
+   "message": null
+  },
+  "TRANR": {
+   "critical": true,
+   "message": null
+  },
+  "TRANTHT": {
+   "critical": true,
+   "message": null
+  },
+  "TRDCY": {
+   "critical": true,
+   "message": null
+  },
+  "TRDIF": {
+   "critical": true,
+   "message": null
+  },
+  "TRDIS": {
+   "critical": true,
+   "message": null
+  },
+  "TRKPF": {
+   "critical": true,
+   "message": null
+  },
+  "TRNHD": {
+   "critical": true,
+   "message": null
+  },
+  "TRPLPORO": {
+   "critical": true,
+   "message": null
+  },
+  "TRROCK": {
+   "critical": true,
+   "message": null
+  },
+  "TUNINGH": {
+   "critical": false,
+   "message": null
+  },
+  "TUNINGL": {
+   "critical": false,
+   "message": null
+  },
+  "TUNINGS": {
+   "critical": false,
+   "message": null
+  },
+  "TZONE": {
+   "critical": true,
+   "message": null
+  },
+  "UNCODHMD": {
+   "critical": true,
+   "message": null
+  },
+  "UNIFOUTS": {
+   "critical": false,
+   "message": null
+  },
+  "UNIFSAVE": {
+   "critical": false,
+   "message": null
+  },
+  "USECUPL": {
+   "critical": true,
+   "message": null
+  },
+  "USEFLUX": {
+   "critical": true,
+   "message": null
+  },
+  "USENOFLO": {
+   "critical": true,
+   "message": null
+  },
+  "VDFLOW": {
+   "critical": true,
+   "message": null
+  },
+  "VDFLOWR": {
+   "critical": true,
+   "message": null
+  },
+  "VE": {
+   "critical": true,
+   "message": null
+  },
+  "VEDEBUG": {
+   "critical": true,
+   "message": null
+  },
+  "VEFIN": {
+   "critical": true,
+   "message": null
+  },
+  "VEFRAC": {
+   "critical": true,
+   "message": null
+  },
+  "VEFRACP": {
+   "critical": true,
+   "message": null
+  },
+  "VEFRACPV": {
+   "critical": true,
+   "message": null
+  },
+  "VEFRACV": {
+   "critical": true,
+   "message": null
+  },
+  "VFPCHK": {
+   "critical": true,
+   "message": null
+  },
+  "VFPTABL": {
+   "critical": true,
+   "message": null
+  },
+  "VISAGE": {
+   "critical": true,
+   "message": null
+  },
+  "VISCD": {
+   "critical": true,
+   "message": null
+  },
+  "VISDATES": {
+   "critical": true,
+   "message": null
+  },
+  "VISOPTS": {
+   "critical": true,
+   "message": null
+  },
+  "WAITBAL": {
+   "critical": true,
+   "message": null
+  },
+  "WALKALIN": {
+   "critical": true,
+   "message": null
+  },
+  "WALQCALC": {
+   "critical": true,
+   "message": null
+  },
+  "WAPI": {
+   "critical": true,
+   "message": null
+  },
+  "WARN": {
+   "critical": false,
+   "message": null
+  },
+  "WBHGLR": {
+   "critical": true,
+   "message": null
+  },
+  "WBOREVOL": {
+   "critical": true,
+   "message": null
+  },
+  "WCALCVAL": {
+   "critical": true,
+   "message": null
+  },
+  "WCONINJ": {
+   "critical": true,
+   "message": null
+  },
+  "WCONINJP": {
+   "critical": true,
+   "message": null
+  },
+  "WCUTBACK": {
+   "critical": true,
+   "message": null
+  },
+  "WCUTBACT": {
+   "critical": true,
+   "message": null
+  },
+  "WDRILPRI": {
+   "critical": true,
+   "message": null
+  },
+  "WDRILRES": {
+   "critical": true,
+   "message": null
+  },
+  "WDRILTIM": {
+   "critical": true,
+   "message": null
+  },
+  "WECONINJ": {
+   "critical": true,
+   "message": null
+  },
+  "WECONT": {
+   "critical": true,
+   "message": null
+  },
+  "WELCNTL": {
+   "critical": true,
+   "message": null
+  },
+  "WELDEBUG": {
+   "critical": true,
+   "message": null
+  },
+  "WELEVNT": {
+   "critical": true,
+   "message": null
+  },
+  "WELMOVEL": {
+   "critical": true,
+   "message": null
+  },
+  "WELOPENL": {
+   "critical": true,
+   "message": null
+  },
+  "WELPRI": {
+   "critical": true,
+   "message": null
+  },
+  "WELSOMIN": {
+   "critical": true,
+   "message": null
+  },
+  "WELSPECL": {
+   "critical": true,
+   "message": null
+  },
+  "WFRICSEG": {
+   "critical": true,
+   "message": null
+  },
+  "WFRICSGL": {
+   "critical": true,
+   "message": null
+  },
+  "WFRICTN": {
+   "critical": true,
+   "message": null
+  },
+  "WFRICTNL": {
+   "critical": true,
+   "message": null
+  },
+  "WGASPROD": {
+   "critical": true,
+   "message": null
+  },
+  "WGORPEN": {
+   "critical": true,
+   "message": null
+  },
+  "WH2NUM": {
+   "critical": true,
+   "message": null
+  },
+  "WH3NUM": {
+   "critical": true,
+   "message": null
+  },
+  "WHEDREFD": {
+   "critical": true,
+   "message": null
+  },
+  "WHTEMP": {
+   "critical": true,
+   "message": null
+  },
+  "WLIFT": {
+   "critical": true,
+   "message": null
+  },
+  "WLIMTOL": {
+   "critical": true,
+   "message": null
+  },
+  "WLISTARG": {
+   "critical": true,
+   "message": null
+  },
+  "WLISTNAM": {
+   "critical": true,
+   "message": null
+  },
+  "WLISTOPT": {
+   "critical": true,
+   "message": null
+  },
+  "WNETCTRL": {
+   "critical": true,
+   "message": null
+  },
+  "WNETDP": {
+   "critical": true,
+   "message": null
+  },
+  "WORKLIM": {
+   "critical": true,
+   "message": null
+  },
+  "WORKTHP": {
+   "critical": true,
+   "message": null
+  },
+  "WPIMULTL": {
+   "critical": true,
+   "message": null
+  },
+  "WPITAB": {
+   "critical": true,
+   "message": null
+  },
+  "WPLUG": {
+   "critical": true,
+   "message": null
+  },
+  "WPOLYRED": {
+   "critical": true,
+   "message": null
+  },
+  "WPOTCALC": {
+   "critical": false,
+   "message": null
+  },
+  "WREGROUP": {
+   "critical": true,
+   "message": null
+  },
+  "WSCCLEAN": {
+   "critical": true,
+   "message": null
+  },
+  "WSCCLENL": {
+   "critical": true,
+   "message": null
+  },
+  "WSCTAB": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGDFIN": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGDFMD": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGDFPA": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGEXSS": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGFLIM": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGFMOD": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGINIT": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGITER": {
+   "critical": false,
+   "message": null
+  },
+  "WSEGLABY": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGLINK": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGMULT": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGPROP": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGPULL": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGSEP": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGSOLV": {
+   "critical": true,
+   "message": null
+  },
+  "WSEGTABL": {
+   "critical": true,
+   "message": null
+  },
+  "WSURFACT": {
+   "critical": true,
+   "message": null
+  },
+  "WTADD": {
+   "critical": true,
+   "message": null
+  },
+  "WTEMPQ": {
+   "critical": true,
+   "message": null
+  },
+  "WTHPMAX": {
+   "critical": true,
+   "message": null
+  },
+  "ZIPP2OFF": {
+   "critical": false,
+   "message": null
+  },
+  "ZIPPY2": {
+   "critical": false,
+   "message": null
+  }
+ },
+ "partially_supported": {
+  "AQUCON": {
+   "12": {
+    "type": "double",
+    "critical": false,
+    "message": "AQUCON(VEOPT1): Vertical Equilibrium option one– not used",
+    "allow": [
+     1.0
+    ]
+   },
+   "13": {
+    "type": "double",
+    "critical": false,
+    "message": "AQUCON(VEOPI2): Vertical Equilibrium option two– not used",
+    "allow": [
+     1.0
+    ]
+   }
+  },
+  "AQUCT": {
+   "12": {
+    "type": "double",
+    "critical": false,
+    "message": "AQUCT(SALTCON): option is not used and should be defaulted – value ignored",
+    "allow": [
+     0.0
+    ]
+   }
+  },
+  "AQUFETP": {
+   "8": {
+    "type": "double",
+    "critical": false,
+    "message": "AQUFETP(SALTCON): option is not used and should be defaulted – value ignored",
+    "allow": [
+     0.0
+    ]
+   },
+   "9": {
+    "type": "double",
+    "critical": false,
+    "message": "AQUFETP(TEMP): option is not used and should be defaulted – value ignored",
+    "allow": []
+   }
+  },
+  "BRANPROP": {
+   "5": {
+    "type": "string",
+    "critical": true,
+    "message": "BRANPROP(ALQ-DEN): option is not supported. Default is supported.",
+    "allow": [
+     "NONE"
+    ]
+   }
+  },
+  "CECON": {
+   "9": {
+    "type": "string",
+    "critical": true,
+    "message": "CECON(PROCEDURE): only CON, +CON and WELL workover procedures are supported",
+    "allow": [
+     "CON",
+     "+CON",
+     "WELL"
+    ]
+   },
+   "10": {
+    "type": "string",
+    "critical": true,
+    "message": "CECON(CHECK_STOPPED): only the NO option is supported",
+    "allow": [
+     "NO"
+    ]
+   },
+   "11": {
+    "type": "double",
+    "critical": false,
+    "message": "CECON(MIN_OIL): minimum oil rate limit is not supported and should be defaulted (1*) – value ignored",
+    "allow": []
+   },
+   "12": {
+    "type": "double",
+    "critical": false,
+    "message": "CECON(MIN_GAS): minimum gas rate limit is not supported and should be defaulted (1*) – value ignored",
+    "allow": []
+   },
+   "13": {
+    "type": "string",
+    "critical": true,
+    "message": "CECON(FOLLOW_ON_WELL): follow-on well is not supported and should be defaulted",
+    "allow": []
+   }
+  },
+  "DIFFC": {
+   "7": {
+    "type": "double",
+    "critical": false,
+    "message": "DIFFC(ISATNUM1): only default value of 0 supported – will continue",
+    "allow": [
+     0.0
+    ]
+   },
+   "8": {
+    "type": "double",
+    "critical": false,
+    "message": "DIFFC(ISATNUM2): only default value of 0 supported – will continue",
+    "allow": [
+     0.0
+    ]
+   }
+  },
+  "EDITNNC": {
+   "8": {
+    "type": "int",
+    "critical": true,
+    "message": "EDITNNC(ISATNUM1): only default value of 0 supported",
+    "allow": [
+     0
+    ]
+   },
+   "9": {
+    "type": "int",
+    "critical": true,
+    "message": "EDITNNC(ISATNUM2): only default value of 0 supported",
+    "allow": [
+     0
+    ]
+   },
+   "10": {
+    "type": "int",
+    "critical": true,
+    "message": "EDITNNC(IPRSNUM1): only default value of 0 supported",
+    "allow": [
+     0
+    ]
+   },
+   "11": {
+    "type": "int",
+    "critical": true,
+    "message": "EDITNNC(IPRSNUM2): only default value of 0 supported",
+    "allow": [
+     0
+    ]
+   },
+   "12": {
+    "type": "string",
+    "critical": true,
+    "message": "EDITNNC(FACE1): not supported use default.",
+    "allow": [
+     "NONE"
+    ]
+   },
+   "13": {
+    "type": "string",
+    "critical": true,
+    "message": "EDITNNC(FACE2): not supported use default.",
+    "allow": [
+     "NONE"
+    ]
+   },
+   "14": {
+    "type": "double",
+    "critical": true,
+    "message": "EDITNNC(DIFFNNC): not supported and should be defaulted",
+    "allow": [
+     0.0
+    ]
+   }
+  },
+  "EHYSTR": {
+   "2": {
+    "type": "int",
+    "critical": true,
+    "message": "EHYSTR(HYSTMOD): only Carlson or Killough Hysteresis Models supported (0,1 or 2,3,4)",
+    "allow": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   "3": {
+    "type": "double",
+    "critical": false,
+    "message": "EHYSTR(HYSTREL): Killough’s option not supported and should be defaulted",
+    "allow": [
+     1.0
+    ]
+   },
+   "5": {
+    "type": "string",
+    "critical": true,
+    "message": "EHYSTR(HYSTOPT): relative permeability hysteresis option should equal BOTH, KR, or PC",
+    "allow": [
+     "KR",
+     "PC",
+     "BOTH"
+    ]
+   },
+   "6": {
+    "type": "string",
+    "critical": true,
+    "message": "EHYSTR(HYSTSCAN): only RETR supported",
+    "allow": [
+     "RETR"
+    ]
+   },
+   "7": {
+    "type": "string",
+    "critical": false,
+    "message": "EHYSTR(HYSTMOB): mobility option not supported and is ignored",
+    "allow": [
+     "DRAIN"
+    ]
+   },
+   "8": {
+    "type": "string",
+    "critical": false,
+    "message": "EHYSTR(HYSTWET): only OIL supported value is ignored",
+    "allow": [
+     "OIL"
+    ]
+   },
+   "9": {
+    "type": "string",
+    "critical": false,
+    "message": "EHYSTR(HYBAKOIL): not used and is ignored",
+    "allow": [
+     "NO"
+    ]
+   },
+   "10": {
+    "type": "string",
+    "critical": false,
+    "message": "EHYSTR(HYBAKGAS): not used and is ignored",
+    "allow": [
+     "NO"
+    ]
+   },
+   "11": {
+    "type": "string",
+    "critical": false,
+    "message": "EHYSTR(HYBAKWAT): not used and is ignored",
+    "allow": [
+     "NO"
+    ]
+   },
+   "12": {
+    "type": "double",
+    "critical": true,
+    "message": "EHYSTR(HYTHRESH): Killough’s option not supported and should be defaulted",
+    "allow": [
+     0.0
+    ]
+   }
+  },
+  "ENDSCALE": {
+   "1": {
+    "type": "string",
+    "critical": true,
+    "message": "ENDSCALE(DIRECT): only default value of NODIR supported",
+    "allow": [
+     "NODIR"
+    ]
+   },
+   "2": {
+    "type": "string",
+    "critical": true,
+    "message": "ENDSCALE(IRREVERS): only default value of REVERS supported",
+    "allow": [
+     "REVERS"
+    ]
+   },
+   "3": {
+    "type": "int",
+    "critical": false,
+    "message": "ENDSCALE(NTENDP): depth end-point scaling not supported – value ignored",
+    "allow": [
+     1
+    ]
+   },
+   "4": {
+    "type": "int",
+    "critical": false,
+    "message": "ENDSCALE(NNODES): depth end-point scaling not supported – value ignored",
+    "allow": [
+     20
+    ]
+   },
+   "5": {
+    "type": "int",
+    "critical": true,
+    "message": "ENDSCALE(MODE): depth temperature end-point scaling not supported",
+    "allow": [
+     0
+    ]
+   }
+  },
+  "EQLDIMS": {
+   "4": {
+    "type": "int",
+    "critical": true,
+    "message": "EQLDIMS(NTTRVD): tracer regions (TNUM) not supported. This item should be defaulted to 1.",
+    "allow": [
+     1
+    ]
+   }
+  },
+  "EQLOPTS": {
+   "1": {
+    "type": "string",
+    "critical": true,
+    "message": "EQLOPTS(MOBILE/QUIESC): options not supported",
+    "allow": [
+     "THPRES",
+     "IRREVERS"
+    ]
+   },
+   "2": {
+    "type": "string",
+    "critical": true,
+    "message": "EQLOPTS(MOBILE/QUIESC): options not supported",
+    "allow": [
+     "THPRES",
+     "IRREVERS"
+    ]
+   },
+   "3": {
+    "type": "string",
+    "critical": true,
+    "message": "EQLOPTS(MOBILE/QUIESC): options not supported",
+    "allow": [
+     "THPRES",
+     "IRREVERS"
+    ]
+   },
+   "4": {
+    "type": "string",
+    "critical": true,
+    "message": "EQLOPTS(MOBILE/QUIESC): options not supported",
+    "allow": [
+     "THPRES",
+     "IRREVERS"
+    ]
+   }
+  },
+  "EQUIL": {
+   "9": {
+    "type": "int",
+    "critical": true,
+    "message": "EQUIL(OIP_INIT): only values between -20 and 20 are allowed (default is -5)",
+    "expr": "v >= -20 and v <= 20"
+   },
+   "10": {
+    "type": "int",
+    "critical": false,
+    "message": "EQUIL(COMP_INIT_TYPE): only types 1 (total composition) and 3 (liquid composition with a gas cap) are supported",
+    "allow": [
+     1,
+     3
+    ]
+   },
+   "11": {
+    "type": "int",
+    "critical": false,
+    "message": "EQUIL(COMP_NOT_SET_SAT_PRESSURE): must be defaulted/omitted or set to 0 (reset when needed) or 1 (keep datum pressure)",
+    "allow": [
+     0,
+     1
+    ]
+   }
+  },
+  "FAULTS": {
+   "1": {
+    "type": "string",
+    "critical": false,
+    "message": "FAULTS(FLTNAME): Only names of faults up to 8 characters are supported. Will ignore excess characters.",
+    "expr": "len(v)<=8"
+   }
+  },
+  "FOAMFSC": {
+   "4": {
+    "type": "double",
+    "critical": false,
+    "message": "FOAMFSC(MINSWAT): option is not supported – value ignored",
+    "allow": [
+     1e-06
+    ]
+   }
+  },
+  "FOAMOPTS": {
+   "2": {
+    "type": "string",
+    "critical": true,
+    "message": "FOAMOPTS(FOAMOPT2): only the default option of TAB is supported",
+    "allow": [
+     "TAB"
+    ]
+   }
+  },
+  "FOAMROCK": {
+   "1": {
+    "type": "int",
+    "critical": true,
+    "message": "FOAMROCK(ADINDX): only the default(1) value is supported",
+    "allow": [
+     1
+    ]
+   }
+  },
+  "GCONINJE": {
+   "10": {
+    "type": "string",
+    "critical": true,
+    "message": "GCONINJE(GUIPHASE): only RATE/NETV/RESV/VOID are supported - will STOP",
+    "allow": [
+     "RATE",
+     "NETV",
+     "RESV",
+     "VOID"
+    ]
+   },
+   "13": {
+    "type": "double",
+    "critical": false,
+    "message": "GCONINJE(WGASRATE): wet gas rate is not used and should be defaulted (1*)",
+    "allow": []
+   }
+  },
+  "GCONPROD": {
+   "2": {
+    "type": "string",
+    "critical": true,
+    "message": "GCONPROD(TARGET): valid option should be NONE/FLD/ORAT/WRAT/GRAT/LRAT or RESV",
+    "allow": [
+     "NONE",
+     "FLD",
+     "ORAT",
+     "WRAT",
+     "GRAT",
+     "LRAT",
+     "RESV"
+    ]
+   },
+   "7": {
+    "type": "string",
+    "critical": true,
+    "message": "GCONPROD(ACTION): Only NONE, RATE and WELL are supported",
+    "allow": [
+     "NONE",
+     "RATE",
+     "WELL"
+    ]
+   },
+   "11": {
+    "type": "string",
+    "critical": true,
+    "message": "GCONPROD(ACTWAT): Only NONE and RATE are supported",
+    "allow": [
+     "NONE",
+     "RATE"
+    ]
+   },
+   "12": {
+    "type": "string",
+    "critical": true,
+    "message": "GCONPROD(ACTGAS): Only NONE and RATE are supported",
+    "allow": [
+     "NONE",
+     "RATE"
+    ]
+   },
+   "13": {
+    "type": "string",
+    "critical": true,
+    "message": "GCONPROD(ACTLIQ): Only NONE and RATE are supported",
+    "allow": [
+     "NONE",
+     "RATE"
+    ]
+   },
+   "15": {
+    "type": "double",
+    "critical": true,
+    "message": "GCONPROD(RESVFRAC): reservoir volume fraction is not supported and should be defaulted (1*)",
+    "allow": []
+   },
+   "16": {
+    "type": "double",
+    "critical": false,
+    "message": "GCONPROD(WGASRATE): wet gas rate is not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "17": {
+    "type": "double",
+    "critical": false,
+    "message": "GCONPROD(CALRATE): calorific rate is not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "18": {
+    "type": "double",
+    "critical": false,
+    "message": "GCONPROD(GASFRAC): gas production fraction is not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "19": {
+    "type": "double",
+    "critical": false,
+    "message": "GCONPROD(WATFRAC): water production fraction is not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "20": {
+    "type": "double",
+    "critical": true,
+    "message": "GCONPROD(COMBRATE): linearly combined rate is not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "21": {
+    "type": "string",
+    "critical": true,
+    "message": "GCONPROD(COMBPROC): linearly combined procedure is not used and should be defaulted (1*)",
+    "allow": [
+     "NONE"
+    ]
+   }
+  },
+  "GECON": {
+   "7": {
+    "type": "string",
+    "critical": true,
+    "message": "GECON(WORKOVER): Workover procedures only implemented for WELL and NONE",
+    "allow": [
+     "NONE",
+     "WELL"
+    ]
+   },
+   "8": {
+    "type": "string",
+    "critical": true,
+    "message": "GECON(ENDRUN): End run not implemented",
+    "allow": [
+     "NO"
+    ]
+   }
+  },
+  "GRIDFILE": {
+   "1": {
+    "type": "int",
+    "critical": false,
+    "message": "GRIDFILE(NGRID): output of GRID file is not supported.",
+    "allow": [
+     0
+    ]
+   },
+   "2": {
+    "type": "int",
+    "critical": false,
+    "message": "GRIDFILE(NEGRID): only generate (1) or not (0) an EGRID file is supported.",
+    "allow": [
+     0,
+     1
+    ]
+   }
+  },
+  "GRIDOPTS": {
+   "1": {
+    "type": "string",
+    "critical": true,
+    "message": "GRIDOPTS(TRANMULT): should be set to either NO or YES",
+    "allow": [
+     "NO",
+     "YES"
+    ]
+   }
+  },
+  "GRUPNET": {
+   "5": {
+    "type": "string",
+    "critical": true,
+    "message": "GRUPNET(SUBSEAMANIFOLD): only option NO is supported",
+    "allow": [
+     "NO"
+    ]
+   },
+   "6": {
+    "type": "string",
+    "critical": true,
+    "message": "GRUPNET(LIFTGAS): only option NO and FLO are supported",
+    "allow": [
+     "NO",
+     "FLO"
+    ]
+   },
+   "7": {
+    "type": "string",
+    "critical": true,
+    "message": "GRUPNET(ALQ-DEN): only option NONE is supported",
+    "allow": [
+     "NONE"
+    ]
+   }
+  },
+  "GSATINJE": {
+   "4": {
+    "type": "double",
+    "critical": true,
+    "message": "GSATINJE(RESV): reservoir volume rate is not supported and should be defaulted (1*)",
+    "allow": [
+     0.0
+    ]
+   }
+  },
+  "GUIDERAT": {
+   "2": {
+    "type": "string",
+    "critical": true,
+    "message": "GUIDERAT(PHASE): unsupported option must be OIL LIQ GAS RES or NONE",
+    "allow": [
+     "OIL",
+     "LIQ",
+     "GAS",
+     "RES",
+     "NONE"
+    ]
+   },
+   "9": {
+    "type": "string",
+    "critical": true,
+    "message": "GUIDERAT(GROPT01): only the default option of YES is supported",
+    "allow": [
+     "YES"
+    ]
+   },
+   "10": {
+    "type": "double",
+    "critical": true,
+    "message": "GUIDERAT(GROPT01): only positive values allowed – will STOP",
+    "expr": "v >= 0"
+   }
+  },
+  "MESSAGES": {
+   "7": {
+    "type": "int",
+    "critical": false,
+    "message": "MESSAGES(STOPMESG): option is not supported",
+    "allow": [
+     1000000
+    ]
+   },
+   "8": {
+    "type": "int",
+    "critical": false,
+    "message": "MESSAGES(STOPCOMT): option is not supported",
+    "allow": [
+     1000000
+    ]
+   },
+   "9": {
+    "type": "int",
+    "critical": false,
+    "message": "MESSAGES(STOPWARN): option is not supported",
+    "allow": [
+     10000
+    ]
+   },
+   "10": {
+    "type": "int",
+    "critical": false,
+    "message": "MESSAGES(STOPPROB): option is not supported",
+    "allow": [
+     100
+    ]
+   },
+   "11": {
+    "type": "int",
+    "critical": false,
+    "message": "MESSAGES(STOPERRS): option is not supported",
+    "allow": [
+     10
+    ]
+   },
+   "12": {
+    "type": "int",
+    "critical": false,
+    "message": "MESSAGES(STOPBUGS): option is not supported",
+    "allow": [
+     1
+    ]
+   },
+   "13": {
+    "type": "int",
+    "critical": false,
+    "message": "MESSAGES(PRTGRPMS): option is not supported",
+    "allow": [
+     10
+    ]
+   }
+  },
+  "MISCIBLE": {
+   "3": {
+    "type": "string",
+    "critical": true,
+    "message": "MISCIBLE(MISOPT): only option NONE is supported",
+    "allow": [
+     "NONE"
+    ]
+   }
+  },
+  "MULTFLT": {
+   "1": {
+    "type": "string",
+    "critical": false,
+    "message": "MLTFLT(FLTNAME): Only names of faults up to 8 characters are supported. Will ignore excess characters.",
+    "expr": "len(v)<=8"
+   },
+   "3": {
+    "type": "double",
+    "critical": true,
+    "message": "MULTFLT(FLT-DIF): the diffusivity multiplier option is not supported",
+    "allow": []
+   }
+  },
+  "MULTIREG": {
+   "4": {
+    "type": "string",
+    "critical": true,
+    "message": "MULTIREG(REGION_NAME): must equal to F/M or O",
+    "allow": [
+     "F",
+     "M",
+     "O"
+    ]
+   }
+  },
+  "MULTREGP": {
+   "3": {
+    "type": "string",
+    "critical": true,
+    "message": "MULTREGP(REGION_NAME): must equal to F/M or O",
+    "allow": [
+     "F",
+     "M",
+     "O"
+    ]
+   }
+  },
+  "MULTREGT": {
+   "6": {
+    "type": "string",
+    "critical": true,
+    "message": "MULTREGT(REGION_NAME): must equal to F/M or O",
+    "allow": [
+     "F",
+     "M",
+     "O"
+    ]
+   }
+  },
+  "NETBALAN": {
+   "1": {
+    "type": "double",
+    "critical": true,
+    "message": "NETBALAN(NSTEP): only negative values or 0 supported",
+    "expr": "v <= 0.0"
+   },
+   "4": {
+    "type": "double",
+    "critical": false,
+    "message": "NETBALAN(GRPCNV): not supported",
+    "allow": [
+     0.01
+    ]
+   },
+   "5": {
+    "type": "int",
+    "critical": false,
+    "message": "NETBALAN(THPMXITE): option is not supported",
+    "allow": [
+     10
+    ]
+   },
+   "6": {
+    "type": "double",
+    "critical": false,
+    "message": "NETBALAN(NTRGERR): not supported",
+    "allow": [
+     1e+20
+    ]
+   },
+   "7": {
+    "type": "double",
+    "critical": false,
+    "message": "NETBALAN(NMAXERR): not supported",
+    "allow": [
+     1e+20
+    ]
+   },
+   "8": {
+    "type": "double",
+    "critical": false,
+    "message": "NETBALAN(NTSMIN): not supported",
+    "allow": []
+   }
+  },
+  "NETWORK": {
+   "3": {
+    "type": "int",
+    "critical": false,
+    "message": "NETWORK(NBCMAX): option is not used and should be defaulted– value ignored",
+    "allow": [
+     20
+    ]
+   }
+  },
+  "NNC": {
+   "8": {
+    "type": "int",
+    "critical": true,
+    "message": "NNC(ISATNUM1): only default value of 0 supported",
+    "allow": [
+     0
+    ]
+   },
+   "9": {
+    "type": "int",
+    "critical": true,
+    "message": "NNC(ISATNUM2): only default value of 0 supported",
+    "allow": [
+     0
+    ]
+   },
+   "10": {
+    "type": "int",
+    "critical": true,
+    "message": "NNC(IPRSNUM1): only default value of 0 supported",
+    "allow": [
+     0
+    ]
+   },
+   "11": {
+    "type": "int",
+    "critical": true,
+    "message": "NNC(IPRSNUM2): only default value of 0 supported",
+    "allow": [
+     0
+    ]
+   },
+   "12": {
+    "type": "string",
+    "critical": true,
+    "message": "NNC(FACE1): not supported use 1*.",
+    "allow": []
+   },
+   "13": {
+    "type": "string",
+    "critical": true,
+    "message": "NNC(FACE2): not supported use 1*.",
+    "allow": []
+   },
+   "14": {
+    "type": "double",
+    "critical": true,
+    "message": "NNC(DIFFNNC): not supported",
+    "allow": [
+     0.0
+    ]
+   },
+   "15": {
+    "type": "double",
+    "critical": true,
+    "message": "NNC(DISPNNC): not supported",
+    "allow": [
+     0.0
+    ]
+   },
+   "16": {
+    "type": "double",
+    "critical": true,
+    "message": "NNC(AREANNC): not supported",
+    "allow": [
+     0.0
+    ]
+   },
+   "17": {
+    "type": "double",
+    "critical": true,
+    "message": "NNC(PERMNNC): not supported",
+    "allow": [
+     0.0
+    ]
+   }
+  },
+  "NODEPROP": {
+   "6": {
+    "type": "string",
+    "critical": true,
+    "message": "NODEPROP(GRPNAME): not supported use default",
+    "allow": []
+   },
+   "7": {
+    "type": "string",
+    "critical": true,
+    "message": "NODEPROP(NETTYPE): not supported use default",
+    "allow": []
+   }
+  },
+  "NUMRES": {
+   "1": {
+    "type": "int",
+    "critical": true,
+    "message": "NUMRES(NUMRES): only a value of one is supported – will STOP",
+    "allow": [
+     1
+    ]
+   }
+  },
+  "PLYMAX": {
+   "2": {
+    "type": "double",
+    "critical": false,
+    "message": "PLYMAX(SALTCON): option is ignored since BRINE and POLYMER combination is not implemented in OPM Flow",
+    "allow": []
+   }
+  },
+  "REGDIMS": {
+   "5": {
+    "type": "int",
+    "critical": false,
+    "message": "REGDIMS(NUSREG): compositional TRACK regions not supported - value ignored",
+    "allow": [
+     0
+    ]
+   },
+   "6": {
+    "type": "int",
+    "critical": false,
+    "message": "REGDIMS(NTCREG): COAL regions not supported - value ignored",
+    "allow": [
+     1
+    ]
+   },
+   "8": {
+    "type": "int",
+    "critical": false,
+    "message": "REGDIMS(NWKDREG): should be equal to 0 - value ignored",
+    "allow": [
+     0
+    ]
+   },
+   "9": {
+    "type": "int",
+    "critical": false,
+    "message": "REGDIMS(NWKIREG): should be equal to 0 - value ignored",
+    "allow": [
+     0
+    ]
+   }
+  },
+  "RESTART": {
+   "3": {
+    "type": "string",
+    "critical": true,
+    "message": "RESTART(RSTYPE): restart from SAVE file not supported",
+    "allow": []
+   },
+   "4": {
+    "type": "string",
+    "critical": true,
+    "message": "RESTART(RSFORMAT): restart from SAVE file not supported",
+    "allow": [
+     "UNFORMATTED"
+    ]
+   }
+  },
+  "ROCKCOMP": {
+   "1": {
+    "type": "string",
+    "critical": true,
+    "message": "ROCKCOMP(ROCKOPT): only the REVERS, IRREVERS and HYSTER options are supported – will STOP",
+    "allow": [
+     "REVERS",
+     "IRREVERS",
+     "HYSTER"
+    ]
+   },
+   "3": {
+    "type": "string",
+    "critical": true,
+    "message": "ROCKCOMP(WATINOPT): only YES and NO are supported",
+    "allow": [
+     "YES",
+     "NO"
+    ]
+   },
+   "4": {
+    "type": "string",
+    "critical": false,
+    "message": "ROCKCOMP(PORTXROP): transmissibility dependent on porosity model is not supported",
+    "allow": []
+   },
+   "5": {
+    "type": "double",
+    "critical": false,
+    "message": "ROCKCOMP(CARKZEXP): transmissibility dependent on porosity model is not supported",
+    "allow": [
+     0.0
+    ]
+   }
+  },
+  "ROCKOPTS": {
+   "1": {
+    "type": "string",
+    "critical": true,
+    "message": "ROCKOPTS: only the PRESSURE options are supported",
+    "allow": [
+     "PRESSURE"
+    ]
+   },
+   "3": {
+    "type": "string",
+    "critical": true,
+    "message": "ROCKOPTS: only PVTNUM and ROCKNUM are supported",
+    "allow": [
+     "PVTNUM",
+     "ROCKNUM"
+    ]
+   }
+  },
+  "SATOPTS": {
+   "1": {
+    "type": "string",
+    "critical": true,
+    "message": "SATOPTS(IRREVERS/SURFTENS): options not supported",
+    "allow": [
+     "HYSTER",
+     "DIRECT"
+    ]
+   },
+   "2": {
+    "type": "string",
+    "critical": true,
+    "message": "SATOPTS(IRREVERS/SURFTENS): options not supported",
+    "allow": [
+     "HYSTER",
+     "DIRECT"
+    ]
+   },
+   "3": {
+    "type": "string",
+    "critical": true,
+    "message": "SATOPTS(IRREVERS/SURFTENS): options not supported",
+    "allow": [
+     "HYSTER",
+     "DIRECT"
+    ]
+   },
+   "4": {
+    "type": "string",
+    "critical": true,
+    "message": "SATOPTS(IRREVERS/SURFTENS): options not supported",
+    "allow": [
+     "HYSTER",
+     "DIRECT"
+    ]
+   }
+  },
+  "SPECGRID": {
+   "4": {
+    "type": "int",
+    "critical": true,
+    "message": "SPECGRID(NUMRES): must be equal to 1",
+    "allow": [
+     1
+    ]
+   },
+   "5": {
+    "type": "string",
+    "critical": true,
+    "message": "SPECGRID(TYPE): only option F (Cartesian grids supported) supported",
+    "allow": [
+     "F"
+    ]
+   }
+  },
+  "TABDIMS": {
+   "7": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(NRVPVT): should be defaulted (20) – ignored as not used",
+    "allow": [
+     20
+    ]
+   },
+   "9": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(NMEOSR): must be greater than or equal to 1",
+    "allow": [
+     1
+    ]
+   },
+   "10": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(NMEOSS): should be equal to 1 - ignored as not used",
+    "allow": [
+     1
+    ]
+   },
+   "12": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(MXNTHR): should be equal to 1 - ignored as not used",
+    "allow": [
+     1
+    ]
+   },
+   "14": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(MXNPMR): should be equal to 0 - ignored as not used",
+    "allow": [
+     0
+    ]
+   },
+   "15": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(NTABKT): should be defaulted (0) – ignored as not used",
+    "allow": [
+     0
+    ]
+   },
+   "16": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(NTALPHA): should be defaulted (0) - ignored as not used",
+    "allow": [
+     0
+    ]
+   },
+   "17": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(NASPKA): should be defaulted (10) - ignored as not used",
+    "allow": [
+     10
+    ]
+   },
+   "18": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(MXRAWG): should be defaulted (10) - ignored as not used",
+    "allow": [
+     10
+    ]
+   },
+   "19": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(MXRASO): should be defaulted (10) - ignored as not used",
+    "allow": [
+     10
+    ]
+   },
+   "20": {
+    "type": "string",
+    "critical": false,
+    "message": "TABDIMS(NOTUSED): should be defaulted (1*) - ignored as not used",
+    "allow": []
+   },
+   "21": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(MCASPP): should be defaulted (5) - ignored as not used",
+    "allow": [
+     5
+    ]
+   },
+   "22": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(MRASPP): should be defaulted (5) - ignored as not used",
+    "allow": [
+     5
+    ]
+   },
+   "23": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(MXRATF): should be defaulted (5) - ignored as not used",
+    "allow": [
+     5
+    ]
+   },
+   "24": {
+    "type": "int",
+    "critical": false,
+    "message": "TABDIMS(MXNKVT): should be defaulted (0) - ignored as not used",
+    "allow": [
+     0
+    ]
+   },
+   "25": {
+    "type": "string",
+    "critical": false,
+    "message": "TABDIMS(RESVED): should be defaulted (1*) - ignored as not used",
+    "allow": []
+   }
+  },
+  "THPRESFT": {
+   "1": {
+    "type": "string",
+    "critical": false,
+    "message": "THPRESFT(FLTNAME): Only names of faults up to 8 characters are supported. Will ignore excess characters.",
+    "expr": "len(v)<=8"
+   }
+  },
+  "TRACER": {
+   "1": {
+    "type": "string",
+    "critical": true,
+    "message": "TRACER(NAME): Only names of tracers up to 3 characters are supported.",
+    "expr": "len(v)<=3"
+   },
+   "4": {
+    "type": "string",
+    "critical": true,
+    "message": "TRACER(SOLPHASE): partitioned tracer model not supported use default",
+    "allow": []
+   },
+   "5": {
+    "type": "int",
+    "critical": true,
+    "message": "TRACER(KPNUM): partitioned tracer model not supported use default",
+    "allow": [
+     0
+    ]
+   },
+   "6": {
+    "type": "string",
+    "critical": true,
+    "message": "TRACER(ADSPHASE): partitioned tracer model not supported use default",
+    "allow": []
+   }
+  },
+  "TRACERS": {
+   "4": {
+    "type": "int",
+    "critical": false,
+    "message": "TRACERS(MXENVTR):  passive environmental tracers not supported - ignored as not used",
+    "allow": [
+     0
+    ]
+   },
+   "5": {
+    "type": "string",
+    "critical": true,
+    "message": "TRACERS(DIFFOPT): numerical diffusion control for tracers not implemented.",
+    "allow": [
+     "NODIFF"
+    ]
+   },
+   "6": {
+    "type": "int",
+    "critical": false,
+    "message": "TRACERS(MXITRTR): not supported - ignored as not used",
+    "allow": [
+     12
+    ]
+   },
+   "7": {
+    "type": "int",
+    "critical": false,
+    "message": "TRACERS(MNITRTR): not supported - ignored as not used",
+    "allow": [
+     1
+    ]
+   },
+   "8": {
+    "type": "string",
+    "critical": true,
+    "message": "TRACERS(NONLIN): only linear option NO supported",
+    "allow": [
+     "NO"
+    ]
+   },
+   "9": {
+    "type": "int",
+    "critical": false,
+    "message": "TRACERS(LNCONFAC): not supported - ignored as not used",
+    "allow": []
+   },
+   "10": {
+    "type": "int",
+    "critical": false,
+    "message": "TRACERS(NLCONFAC): not supported - ignored as not used",
+    "allow": []
+   },
+   "11": {
+    "type": "double",
+    "critical": false,
+    "message": "TRACERS(CONFAC): not supported - ignored as not used",
+    "allow": [
+     1.0
+    ]
+   },
+   "12": {
+    "type": "int",
+    "critical": false,
+    "message": "TRACERS(NUMCONF): not supported - ignored as not used",
+    "allow": [
+     0
+    ]
+   }
+  },
+  "UDADIMS": {
+   "2": {
+    "type": "int",
+    "critical": false,
+    "message": "UDADIMS(IGNORED): should be defaulted (0) – ignored as not used",
+    "allow": [
+     0
+    ]
+   }
+  },
+  "UDQDIMS": {
+   "11": {
+    "type": "string",
+    "critical": true,
+    "message": "UDQDIMS(RSEED): option is not supported use default",
+    "allow": [
+     "N"
+    ]
+   }
+  },
+  "UDQPARAM": {
+   "1": {
+    "type": "int",
+    "critical": false,
+    "message": "UDQPARAM(RSEED): option not supported – value ignored",
+    "allow": [
+     1
+    ]
+   }
+  },
+  "VISCREF": {
+   "3": {
+    "type": "double",
+    "critical": true,
+    "message": "VISCREF(API): API tracking option is not supported",
+    "allow": []
+   }
+  },
+  "WAGHYSTR": {
+   "3": {
+    "type": "string",
+    "critical": true,
+    "message": "WAGHYSTR(GAS_MODEL): only the YES option is supported – will STOP",
+    "allow": [
+     "YES"
+    ]
+   },
+   "4": {
+    "type": "string",
+    "critical": true,
+    "message": "WAGHYSTR(RES_OIL): only the NO option is supported – will STOP",
+    "allow": [
+     "NO"
+    ]
+   },
+   "5": {
+    "type": "string",
+    "critical": true,
+    "message": "WAGHYSTR(WATER_MODEL): only the NO option is supported – will STOP",
+    "allow": [
+     "NO"
+    ]
+   },
+   "8": {
+    "type": "double",
+    "critical": false,
+    "message": "WAGHYSTR(RES_OIL_MOD_FRACTION): Residual oil modification for STONE1 not supported - value ignored",
+    "allow": []
+   }
+  },
+  "WCONHIST": {
+   "11": {
+    "type": "double",
+    "critical": false,
+    "message": "WCONHIST(WGRA): wet gas rate is not supported use default",
+    "expr": "v == 0"
+   },
+   "12": {
+    "type": "double",
+    "critical": false,
+    "message": "WCONHIST(NGL): natural gas rate is not supported use default",
+    "expr": "v == 0"
+   }
+  },
+  "WCONINJE": {
+   "11": {
+    "type": "double",
+    "critical": true,
+    "message": "WCONINJE(RSSTEAM): is not supported and is ignored",
+    "expr": "v == 0"
+   },
+   "12": {
+    "type": "double",
+    "critical": true,
+    "message": "WCONINJE(OILFRAC): is not supported and is ignored",
+    "expr": "v == 0"
+   },
+   "13": {
+    "type": "double",
+    "critical": true,
+    "message": "WCONINJE(WATFRAC): is not supported and is ignored",
+    "expr": "v == 0"
+   },
+   "14": {
+    "type": "double",
+    "critical": true,
+    "message": "WCONINJE(GASFRAC): is not supported and is ignored",
+    "expr": "v == 0"
+   },
+   "15": {
+    "type": "double",
+    "critical": true,
+    "message": "WCONINJE(OILSTEAM): is not supported and is ignored",
+    "expr": "v == 0"
+   }
+  },
+  "WCONINJH": {
+   "8": {
+    "type": "double",
+    "critical": true,
+    "message": "WCONINJH(RSRVINJ): is not supported and is ignored",
+    "expr": "v == 0"
+   },
+   "9": {
+    "type": "double",
+    "critical": true,
+    "message": "WCONINJH(OILFRAC): is not supported and is ignored",
+    "expr": "v == 0"
+   },
+   "10": {
+    "type": "double",
+    "critical": true,
+    "message": "WCONINJH(WATFRAC): is not supported and is ignored",
+    "expr": "v == 0"
+   },
+   "11": {
+    "type": "double",
+    "critical": true,
+    "message": "WCONINJH(GASFRAC): is not supported and is ignored",
+    "expr": "v == 0"
+   }
+  },
+  "WCONPROD": {
+   "13": {
+    "type": "double",
+    "critical": false,
+    "message": "WCONPROD(WGASRATE): wet gas rate is not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "14": {
+    "type": "double",
+    "critical": false,
+    "message": "WCONPROD(MOLARATE): molar rate not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "15": {
+    "type": "double",
+    "critical": false,
+    "message": "WCONPROD(STEAMRAT): steam rate is not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "16": {
+    "type": "double",
+    "critical": false,
+    "message": "WCONPROD(DELTAP): pressure offset not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "17": {
+    "type": "double",
+    "critical": false,
+    "message": "WCONPROD(DELTAT): temperature offset not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "18": {
+    "type": "double",
+    "critical": false,
+    "message": "WCONPROD(CALRATE): calorific rate not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "19": {
+    "type": "double",
+    "critical": true,
+    "message": "WCONPROD(COMBPROC): linearly combined rate not used and should be defaulted (1*)",
+    "allow": []
+   },
+   "20": {
+    "type": "double",
+    "critical": false,
+    "message": "WCONPROD(NGL): natural gas liquid rate  is not used and should be defaulted (1*)",
+    "allow": []
+   }
+  },
+  "WECON": {
+   "7": {
+    "type": "string",
+    "critical": true,
+    "message": "WECON(ACTION): Only NONE, CON, +CON and WELL options are supported",
+    "allow": [
+     "NONE",
+     "CON",
+     "+CON",
+     "WELL"
+    ]
+   },
+   "8": {
+    "type": "string",
+    "critical": true,
+    "message": "WECON(ENDRUN): only the NO option is supported",
+    "allow": [
+     "NO"
+    ]
+   },
+   "10": {
+    "type": "string",
+    "critical": true,
+    "message": "WECON(ELTOPT): Valid options are POTN and RATE",
+    "allow": [
+     "POTN",
+     "RATE"
+    ]
+   },
+   "11": {
+    "type": "double",
+    "critical": true,
+    "message": "WECON(WCUT2): Feature not supported and should be defaulted",
+    "allow": []
+   },
+   "12": {
+    "type": "string",
+    "critical": true,
+    "message": "WECON(ACTION2): Feature not supported and should be defaulted",
+    "allow": []
+   },
+   "13": {
+    "type": "double",
+    "critical": true,
+    "message": "WECON(GLR): Feature not supported and should be defaulted",
+    "allow": []
+   },
+   "15": {
+    "type": "double",
+    "critical": true,
+    "message": "WECON(TEMP): Feature not supported and should be defaulted",
+    "allow": []
+   }
+  },
+  "WELDRAW": {
+   "4": {
+    "type": "string",
+    "critical": true,
+    "message": "WELDRAW(USE_LIMIT): use of the drawdown limit in the well potential calculation is not supported",
+    "allow": [
+     "NO"
+    ]
+   },
+   "5": {
+    "type": "string",
+    "critical": true,
+    "message": "WELDRAW(GRID_BLOCKS): only the AVG (PI-weighted average drawdown) option is supported",
+    "allow": [
+     "AVG"
+    ]
+   }
+  },
+  "WELLDIMS": {
+   "5": {
+    "type": "int",
+    "critical": false,
+    "message": "WELLDIMS(MXSTAGE): option not supported – value ignored",
+    "allow": [
+     5
+    ]
+   },
+   "6": {
+    "type": "int",
+    "critical": false,
+    "message": "WELLDIMS(MXSTRMS): option not supported – value ignored",
+    "allow": [
+     10
+    ]
+   },
+   "7": {
+    "type": "int",
+    "critical": false,
+    "message": "WELLDIMS(MXMIS): option not supported – value ignored",
+    "allow": [
+     5
+    ]
+   },
+   "8": {
+    "type": "int",
+    "critical": false,
+    "message": "WELLDIMS(MXSEPS): option not supported – value ignored",
+    "allow": [
+     4
+    ]
+   },
+   "9": {
+    "type": "int",
+    "critical": false,
+    "message": "WELLDIMS(MXCOMPS): option not supported – value ignored",
+    "allow": [
+     3
+    ]
+   },
+   "10": {
+    "type": "int",
+    "critical": false,
+    "message": "WELLDIMS(MXDOCOMP): option not supported – value ignored",
+    "allow": [
+     0
+    ]
+   },
+   "11": {
+    "type": "int",
+    "critical": false,
+    "message": "WELLDIMS(MXWSLIST): option not supported – value ignored",
+    "allow": [
+     1
+    ]
+   },
+   "12": {
+    "type": "int",
+    "critical": false,
+    "message": "WELLDIMS(MXWLISTS): option not supported – value ignored",
+    "allow": [
+     1
+    ]
+   },
+   "13": {
+    "type": "int",
+    "critical": false,
+    "message": "WELLDIMS(MXWSECD): option not supported – value ignored",
+    "allow": [
+     10
+    ]
+   },
+   "14": {
+    "type": "int",
+    "critical": false,
+    "message": "WELLDIMS(MXNGPP): option not supported – value ignored",
+    "allow": [
+     201
+    ]
+   }
+  },
+  "WELSPECS": {
+   "8": {
+    "type": "string",
+    "critical": true,
+    "message": "WELSPECS(WELNETWK): only the STD and NO options are supported",
+    "allow": [
+     "STD",
+     "NO"
+    ]
+   },
+   "12": {
+    "type": "string",
+    "critical": true,
+    "message": "WELSPECS(DENOPT): only the SEG option is supported",
+    "allow": [
+     "SEG"
+    ]
+   },
+   "14": {
+    "type": "string",
+    "critical": true,
+    "message": "WELSPECS(STRMLIN1): not used and should be defaulted",
+    "allow": []
+   },
+   "15": {
+    "type": "string",
+    "critical": true,
+    "message": "WELSPECS(STRMLIN2): not used and should be defaulted",
+    "allow": []
+   },
+   "16": {
+    "type": "string",
+    "critical": true,
+    "message": "WELSPECS(TYPECOMP): not used and should be defaulted",
+    "allow": [
+     "STD"
+    ]
+   },
+   "17": {
+    "type": "int",
+    "critical": true,
+    "message": "WELSPECS(POLYTAB): only the default value of zero is supported",
+    "allow": [
+     0
+    ]
+   }
+  },
+  "WELTARG": {
+   "2": {
+    "type": "string",
+    "critical": true,
+    "message": "WELTARG(TARGET): invalid option",
+    "allow": [
+     "ORAT",
+     "WRAT",
+     "GRAT",
+     "LRAT",
+     "RESV",
+     "BHP",
+     "THP",
+     "VFP",
+     "LIFT",
+     "GUID"
+    ]
+   }
+  },
+  "WGRUPCON": {
+   "4": {
+    "type": "string",
+    "critical": true,
+    "message": "WGRUPCON(TARGET): only OIL WAT GAS LIQ RES RAT options are supported",
+    "allow": [
+     "OIL",
+     "WAT",
+     "GAS",
+     "LIQ",
+     "RES",
+     "RAT"
+    ]
+   }
+  },
+  "WHISTCTL": {
+   "2": {
+    "type": "string",
+    "critical": true,
+    "message": "WHISTCTL(END): only the NO option is supported",
+    "allow": [
+     "NO"
+    ]
+   }
+  },
+  "WINJGAS": {
+   "4": {
+    "type": "string",
+    "critical": true,
+    "message": "WINJGAS(MAKEUPGAS): make-up gas stream is not supported and should be defaulted",
+    "allow": []
+   },
+   "5": {
+    "type": "double",
+    "critical": true,
+    "message": "WINJGAS(STAGE): separator stage is not supported and should be defaulted",
+    "allow": [
+     0.0
+    ]
+   }
+  },
+  "WINJTEMP": {
+   "2": {
+    "type": "double",
+    "critical": true,
+    "message": "WINJTEMP(STEAMQAL): steam injection is not supported, this item should be defaulted",
+    "allow": [
+     1.0
+    ]
+   },
+   "5": {
+    "type": "double",
+    "critical": true,
+    "message": "WINJTEMP(ENTHALPY): enthalpy of injected fluid is not supported",
+    "allow": [
+     0.0
+    ]
+   }
+  },
+  "WLIFTOPT": {
+   "6": {
+    "type": "double",
+    "critical": true,
+    "message": "WLIFTOPT(OPTGAS): incremental gas weighting not supported",
+    "allow": [
+     0.0
+    ]
+   },
+   "7": {
+    "type": "string",
+    "critical": true,
+    "message": "WLIFTOPT(OPTLIMIT): only the default NO option is supported",
+    "allow": [
+     "NO"
+    ]
+   }
+  },
+  "WPAVE": {
+   "4": {
+    "type": "string",
+    "critical": false,
+    "message": "WPAVE(WPAVE4) Connection flag not really supported. Should be OPEN or defaulted.",
+    "allow": [
+     "OPEN"
+    ]
+   }
+  },
+  "WTEST": {
+   "3": {
+    "type": "string",
+    "critical": true,
+    "message": "WTEST(TEST): only the E (economic) and P (physical) and G (group) reason is currently supported",
+    "allow": [
+     "E",
+     "P",
+     "G",
+     "EP",
+     "PE",
+     "EG",
+     "GE",
+     "PG",
+     "GP",
+     "PEG",
+     "PGE",
+     "EPG",
+     "EGP",
+     "GEP",
+     "GPE"
+    ]
+   }
+  },
+  "WVFPEXP": {
+   "5": {
+    "type": "string",
+    "critical": false,
+    "message": "WVFPEXP(EXTRAP): only linear extrapolation is support ",
+    "allow": [
+     "WG"
+    ]
+   }
+  },
+  "WWPAVE": {
+   "5": {
+    "type": "string",
+    "critical": false,
+    "message": "WWPAVE(WPAVE4) Connection flag not really supported. Should be OPEN or defaulted.",
+    "allow": [
+     "OPEN"
+    ]
+   }
+  }
+ }
+}

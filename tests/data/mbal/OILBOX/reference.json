@@ -1,0 +1,17 @@
+{
+  "deck": "OILBOX.DATA",
+  "fluid": "oil",
+  "pi": 3500.01416015625,
+  "cw": 3e-06,
+  "cf": 4e-06,
+  "stoiip_simulator": 21372924.0,
+  "rsi": 0.5,
+  "pb": 2500.0,
+  "boi": 1.27999840060083,
+  "swi": 0.20002256906046134,
+  "notes": [
+    "Pi and the first date come from an extrapolation of the first two summary rows to zero production",
+    "Rsi is FGIP/FOIP at the first row. It is correct only without an initial gas cap",
+    "PVT region 1 only"
+  ]
+}

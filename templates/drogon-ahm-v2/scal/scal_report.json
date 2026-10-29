@@ -1,0 +1,419 @@
+{
+ "assumed_range": {
+  "low": {
+   "SORW": 0.05,
+   "KRWEND": 0.1,
+   "KROEND": -0.15,
+   "LET_W": 0.7,
+   "LET_O": 1.3,
+   "SORG": 0.05,
+   "KRGEND": 0.05,
+   "KROGEND": -0.15,
+   "LET_G": 0.7,
+   "LET_OG": 1.3
+  },
+  "high": {
+   "SORW": -0.05,
+   "KRWEND": -0.1,
+   "KROEND": 0.0,
+   "LET_W": 1.3,
+   "LET_O": 0.7,
+   "SORG": -0.05,
+   "KRGEND": -0.1,
+   "KROGEND": 0.0,
+   "LET_G": 1.3,
+   "LET_OG": 0.7
+  }
+ },
+ "groups": {
+  "CH_USF": [
+   1,
+   3,
+   7,
+   9
+  ],
+  "CR": [
+   2,
+   8
+  ],
+  "LSF": [
+   4,
+   10
+  ],
+  "OFF_FP": [
+   5,
+   6,
+   11,
+   12
+  ]
+ },
+ "fits": [
+  {
+   "satnum": 1,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 5.212438847213008e-08,
+     "rmse": 2.4566177408844123e-08
+    },
+    "KROW": {
+     "max_abs_error": 5.532722250484179e-08,
+     "rmse": 2.331577048362318e-08
+    }
+   }
+  },
+  {
+   "satnum": 1,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 5.0988069544288805e-08,
+     "rmse": 2.4622711552301135e-08
+    },
+    "KROG": {
+     "max_abs_error": 6.230417992636461e-08,
+     "rmse": 2.8908978754889954e-08
+    }
+   }
+  },
+  {
+   "satnum": 2,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 6.666666674259858e-08,
+     "rmse": 3.4118882083837724e-08
+    },
+    "KROW": {
+     "max_abs_error": 3.5520338648176164e-07,
+     "rmse": 7.728464805466194e-08
+    }
+   }
+  },
+  {
+   "satnum": 2,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 4.4232730611604154e-07,
+     "rmse": 9.624506806508456e-08
+    },
+    "KROG": {
+     "max_abs_error": 5.938574241387551e-08,
+     "rmse": 2.888619883852186e-08
+    }
+   }
+  },
+  {
+   "satnum": 3,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 5.511325107572518e-08,
+     "rmse": 2.7271309163006133e-08
+    },
+    "KROW": {
+     "max_abs_error": 6.166724638573262e-08,
+     "rmse": 2.3952915840842515e-08
+    }
+   }
+  },
+  {
+   "satnum": 3,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 5.446121328911424e-08,
+     "rmse": 2.765025965795838e-08
+    },
+    "KROG": {
+     "max_abs_error": 5.0049455996292735e-08,
+     "rmse": 2.289503624025575e-08
+    }
+   }
+  },
+  {
+   "satnum": 4,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 6.666666652055397e-08,
+     "rmse": 2.6807901516145617e-08
+    },
+    "KROW": {
+     "max_abs_error": 1.6614881992449426e-07,
+     "rmse": 4.8325448626780666e-08
+    }
+   }
+  },
+  {
+   "satnum": 4,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 2.2366301588583326e-07,
+     "rmse": 5.457868392280268e-08
+    },
+    "KROG": {
+     "max_abs_error": 5.739073194455102e-08,
+     "rmse": 2.237761948325644e-08
+    }
+   }
+  },
+  {
+   "satnum": 5,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 8.435355494662566e-08,
+     "rmse": 4.289486829478325e-08
+    },
+    "KROW": {
+     "max_abs_error": 3.1451563720086284e-07,
+     "rmse": 9.277517845415626e-08
+    }
+   }
+  },
+  {
+   "satnum": 5,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 5.387882140439615e-07,
+     "rmse": 1.7812042909058205e-07
+    },
+    "KROG": {
+     "max_abs_error": 4.4705603111049585e-08,
+     "rmse": 2.2793077063026496e-08
+    }
+   }
+  },
+  {
+   "satnum": 6,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 3.333333342681044e-08,
+     "rmse": 1.8617381603744997e-08
+    },
+    "KROW": {
+     "max_abs_error": 2.2890060613622865e-07,
+     "rmse": 7.674349939392736e-08
+    }
+   }
+  },
+  {
+   "satnum": 6,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 6.694046561506184e-07,
+     "rmse": 1.9034741525755485e-07
+    },
+    "KROG": {
+     "max_abs_error": 5.396212088282226e-08,
+     "rmse": 2.5382965312590877e-08
+    }
+   }
+  },
+  {
+   "satnum": 7,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 5.510037906974671e-08,
+     "rmse": 2.8925154823968742e-08
+    },
+    "KROW": {
+     "max_abs_error": 5.532722250484179e-08,
+     "rmse": 2.331577048362318e-08
+    }
+   }
+  },
+  {
+   "satnum": 7,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 5.0988069544288805e-08,
+     "rmse": 2.4622711552301135e-08
+    },
+    "KROG": {
+     "max_abs_error": 6.230417992636461e-08,
+     "rmse": 2.8908978754889954e-08
+    }
+   }
+  },
+  {
+   "satnum": 8,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 1.66666666689963e-07,
+     "rmse": 6.260908431712278e-08
+    },
+    "KROW": {
+     "max_abs_error": 3.5520338648176164e-07,
+     "rmse": 7.728464805466194e-08
+    }
+   }
+  },
+  {
+   "satnum": 8,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 4.4232730611604154e-07,
+     "rmse": 9.624506806508456e-08
+    },
+    "KROG": {
+     "max_abs_error": 5.938574241387551e-08,
+     "rmse": 2.888619883852186e-08
+    }
+   }
+  },
+  {
+   "satnum": 9,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 1.0000000016940902e-07,
+     "rmse": 3.736102797065294e-08
+    },
+    "KROW": {
+     "max_abs_error": 6.166724638573262e-08,
+     "rmse": 2.3952915840842515e-08
+    }
+   }
+  },
+  {
+   "satnum": 9,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 5.446121328911424e-08,
+     "rmse": 2.765025965795838e-08
+    },
+    "KROG": {
+     "max_abs_error": 5.0049455996292735e-08,
+     "rmse": 2.289503624025575e-08
+    }
+   }
+  },
+  {
+   "satnum": 10,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 1.0000000005838672e-07,
+     "rmse": 3.624734331965785e-08
+    },
+    "KROW": {
+     "max_abs_error": 1.6614881992449426e-07,
+     "rmse": 4.8325448626780666e-08
+    }
+   }
+  },
+  {
+   "satnum": 10,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 2.2366301588583326e-07,
+     "rmse": 5.457868392280268e-08
+    },
+    "KROG": {
+     "max_abs_error": 5.739073194455102e-08,
+     "rmse": 2.237761948325644e-08
+    }
+   }
+  },
+  {
+   "satnum": 11,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 1.66666666689963e-07,
+     "rmse": 7.974192829753944e-08
+    },
+    "KROW": {
+     "max_abs_error": 3.1451564297402257e-07,
+     "rmse": 9.277517845439916e-08
+    }
+   }
+  },
+  {
+   "satnum": 11,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 5.387882140439615e-07,
+     "rmse": 1.7812042909058205e-07
+    },
+    "KROG": {
+     "max_abs_error": 4.4705603111049585e-08,
+     "rmse": 2.2793077063026496e-08
+    }
+   }
+  },
+  {
+   "satnum": 12,
+   "keyword": "SWOF",
+   "curves": {
+    "KRW": {
+     "max_abs_error": 4.324047838885625e-08,
+     "rmse": 2.3347578469682733e-08
+    },
+    "KROW": {
+     "max_abs_error": 2.2890060613622865e-07,
+     "rmse": 7.674349939392736e-08
+    }
+   }
+  },
+  {
+   "satnum": 12,
+   "keyword": "SGOF",
+   "curves": {
+    "KRG": {
+     "max_abs_error": 6.694046561506184e-07,
+     "rmse": 1.9034741525755485e-07
+    },
+    "KROG": {
+     "max_abs_error": 5.396212088282226e-08,
+     "rmse": 2.5382965312590877e-08
+    }
+   }
+  }
+ ],
+ "base_vs_deck_max_kr_error": 2.1493039999986863e-06,
+ "base_vs_deck_max_pc_error_above_swl": 9.67403199858552e-06,
+ "max_rows_per_table": 100,
+ "truth_coverage": {
+  "1:KRW": 1.0,
+  "1:KROW": 1.0,
+  "2:KRW": 1.0,
+  "2:KROW": 1.0,
+  "3:KRW": 1.0,
+  "3:KROW": 1.0,
+  "4:KRW": 1.0,
+  "4:KROW": 1.0,
+  "5:KRW": 1.0,
+  "5:KROW": 1.0,
+  "6:KRW": 1.0,
+  "6:KROW": 1.0,
+  "7:KRW": 1.0,
+  "7:KROW": 1.0,
+  "8:KRW": 1.0,
+  "8:KROW": 1.0,
+  "9:KRW": 1.0,
+  "9:KROW": 1.0,
+  "10:KRW": 1.0,
+  "10:KROW": 1.0,
+  "11:KRW": 1.0,
+  "11:KROW": 1.0,
+  "12:KRW": 1.0,
+  "12:KROW": 1.0
+ },
+ "truth_coverage_min": 1.0,
+ "truth_coverage_mean": 1.0
+}

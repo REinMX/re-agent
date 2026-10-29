@@ -1,0 +1,2 @@
+EXECUTABLE ../../jobs/rft_extract.py
+ARGLIST <ECLBASE>

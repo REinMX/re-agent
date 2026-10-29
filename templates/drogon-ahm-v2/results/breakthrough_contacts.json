@@ -1,0 +1,213 @@
+{
+  "definition": "simulated first WWCT crossing minus truth date, days",
+  "wells": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+  ],
+  "before": {
+    "iter-0": {
+      "breakthrough": {
+        "A1": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": -84.0,
+          "mean_abs_error_days": 81.25,
+          "within_30_days": 3
+        },
+        "A2": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": -82.0,
+          "mean_abs_error_days": 83.3125,
+          "within_30_days": 3
+        },
+        "A3": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": -35.0,
+          "mean_abs_error_days": 33.6875,
+          "within_30_days": 7
+        },
+        "A4": {
+          "n_breakthrough": 13,
+          "never": 3,
+          "median_error_days": -275.0,
+          "mean_abs_error_days": 223.53846153846155,
+          "within_30_days": 2
+        }
+      },
+      "contacts": {
+        "OWC_CENTRAL": {
+          "mean": -1.1478557500000002,
+          "sd": 7.426621945988521,
+          "p5": -11.9765,
+          "p95": 8.9781975,
+          "truth": 6.0,
+          "truth_inside": true
+        },
+        "OWC_FLANK": {
+          "mean": -0.821870625,
+          "sd": 6.995380868764253,
+          "p5": -9.9004275,
+          "p95": 9.356075,
+          "truth": -4.0,
+          "truth_inside": true
+        }
+      }
+    },
+    "iter-1": {
+      "breakthrough": {
+        "A1": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": 40.0,
+          "mean_abs_error_days": 28.125,
+          "within_30_days": 6
+        },
+        "A2": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": -37.0,
+          "mean_abs_error_days": 41.125,
+          "within_30_days": 1
+        },
+        "A3": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": 39.0,
+          "mean_abs_error_days": 50.1875,
+          "within_30_days": 3
+        },
+        "A4": {
+          "n_breakthrough": 15,
+          "never": 1,
+          "median_error_days": -63.0,
+          "mean_abs_error_days": 89.86666666666666,
+          "within_30_days": 3
+        }
+      },
+      "contacts": {
+        "OWC_CENTRAL": {
+          "mean": 8.908531875000001,
+          "sd": 0.8681837466436756,
+          "p5": 7.475575,
+          "p95": 9.861229999999999,
+          "truth": 6.0,
+          "truth_inside": false
+        },
+        "OWC_FLANK": {
+          "mean": 8.995826874999999,
+          "sd": 1.414076505029431,
+          "p5": 6.9276625,
+          "p95": 10.99265,
+          "truth": -4.0,
+          "truth_inside": false
+        }
+      }
+    }
+  },
+  "after": {
+    "iter-0": {
+      "breakthrough": {
+        "A1": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": -50.5,
+          "mean_abs_error_days": 86.625,
+          "within_30_days": 4
+        },
+        "A2": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": -122.0,
+          "mean_abs_error_days": 155.25,
+          "within_30_days": 0
+        },
+        "A3": {
+          "n_breakthrough": 15,
+          "never": 1,
+          "median_error_days": -37.0,
+          "mean_abs_error_days": 61.0,
+          "within_30_days": 4
+        },
+        "A4": {
+          "n_breakthrough": 12,
+          "never": 4,
+          "median_error_days": -310.0,
+          "mean_abs_error_days": 291.0,
+          "within_30_days": 0
+        }
+      },
+      "contacts": {
+        "OWC_CENTRAL": {
+          "mean": -1.1478557500000002,
+          "sd": 7.426621945988521,
+          "p5": -11.9765,
+          "p95": 8.9781975,
+          "truth": 6.0,
+          "truth_inside": true
+        },
+        "OWC_FLANK": {
+          "mean": -0.821870625,
+          "sd": 6.995380868764253,
+          "p5": -9.9004275,
+          "p95": 9.356075,
+          "truth": -4.0,
+          "truth_inside": true
+        }
+      }
+    },
+    "iter-1": {
+      "breakthrough": {
+        "A1": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": 25.0,
+          "mean_abs_error_days": 37.6875,
+          "within_30_days": 7
+        },
+        "A2": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": 8.0,
+          "mean_abs_error_days": 38.75,
+          "within_30_days": 6
+        },
+        "A3": {
+          "n_breakthrough": 16,
+          "never": 0,
+          "median_error_days": 135.0,
+          "mean_abs_error_days": 141.8125,
+          "within_30_days": 1
+        },
+        "A4": {
+          "n_breakthrough": 9,
+          "never": 7,
+          "median_error_days": -30.0,
+          "mean_abs_error_days": 90.44444444444444,
+          "within_30_days": 3
+        }
+      },
+      "contacts": {
+        "OWC_CENTRAL": {
+          "mean": 4.101921875,
+          "sd": 0.9179609956798727,
+          "p5": 2.9149875,
+          "p95": 5.327344999999999,
+          "truth": 6.0,
+          "truth_inside": false
+        },
+        "OWC_FLANK": {
+          "mean": -3.7923993750000005,
+          "sd": 1.3122130521754398,
+          "p5": -5.140745,
+          "p95": -1.7484575,
+          "truth": -4.0,
+          "truth_inside": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+# Scenario spec for skills/scenario-build/scripts/scenario_build.py (schema_version 1).
+# Paths: case_root is relative to this file; deck is relative to case_root. Dates are YYYY-MM-DD.
+# Numbers are in the deck units. A value written "${name}" takes the value of variable `name`
+# (initial value, or an Everest control file). Quote each reference.
+schema_version: 1
+scenario_id: infill_p2_lift
+parent: baseline
+description: Infill P2 from 2027-01-01, gas lift on P1, higher field gas target.
+case_root: ../model_tree          # the folder that holds model/ and include/
+deck: model/CASE.DATA
+field_vectors_may_move: [FOPT, FOPR, FGPT, FGPR, FWPT, FWPR]
+variables:                       # optional; drives Everest controls (everest_controls.py)
+  p2_orat: {initial: 800, min: 200, max: 1500, note: P2 oil rate target}
+  p1_alq: {initial: 50000, min: 0, max: 150000, note: P1 lift gas sm3/d}
+  field_grat: {initial: 2000000, min: 1000000, max: 3000000}
+  p2_delay: {initial: 0, min: 0, max: 365, integer: true, note: days after the infill date}
+operations:
+  - id: p2
+    type: infill                 # WELSPECS + COMPDAT + WCONPROD (role: injector -> WCONINJE)
+    date: 2027-01-01
+    well: P2
+    group: G1
+    i: 12
+    j: 7
+    phase: OIL
+    connections: [{k1: 3, k2: 8, diameter: 0.216}]
+    control: {mode: ORAT, orat: "${p2_orat}", bhp: 120}
+    affected_wells: [P1, I1]     # offset wells you expect to move (scenario-qc expected_changes)
+  - type: shift                  # move named operations in time
+    ops: [p2]
+    days: "${p2_delay}"
+  - type: gas_lift               # LIFTOPT, WLIFTOPT, GLIFTOPT, ALQ (WELTARG LIFT)
+    date: 2027-01-01
+    liftopt: {increment: 12500, economic_gradient: 0.005}
+    wells: [{well: P1, max_rate: 150000}]
+    alq: [{well: P1, value: "${p1_alq}"}]
+  - type: target                 # level: well | well_limit | group_production | group_injection | sales
+    date: 2027-01-01
+    level: group_production
+    name: FIELD
+    mode: GRAT
+    grat: "${field_grat}"
+    action: RATE
+  # Other types: convert_to_injector, wag, workover, back_pressure. See SKILL.md.

@@ -1,0 +1,22 @@
+# Home-box FMU env on ERT 26 (verified 2026-10-17). Build:
+#   uv venv --python 3.12 <env> && uv pip install --python <env>/bin/python -r tools/box/fmu26.txt
+# subscript needs its full dependencies (xtgeoapp-grd); a partial install breaks ERT plugin loading.
+ert==26.0.2
+semeio==3.4.1
+pyscal==0.18.0
+res2df==1.3.17
+resdata==6.3.5
+xtgeo==4.27.0
+fmu-dataio==2.32.0
+fmu-tools==1.35.0
+subscript==1.16.2
+iterative_ensemble_smoother==1.3.0
+opm==2026.4
+opm-simulators==2026.4
+everest-models @ git+https://github.com/equinor/everest-models@3.1.3
+ruff==0.16.1
+pytest
+pyyaml
+jsonschema
+openpyxl
+xlsxwriter

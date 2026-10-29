@@ -1,0 +1,2 @@
+EXECUTABLE ../../jobs/drogon_scal.py
+ARGLIST <CONFIG_PATH>/../scal/drogon_scalrec.csv <CONFIG_PATH>/../scal/satnum_groups.csv

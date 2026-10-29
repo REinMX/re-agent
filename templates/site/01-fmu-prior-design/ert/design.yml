@@ -1,0 +1,29 @@
+# Prior design of {{param:case_name}}. bin/prior_design.py reads this file twice:
+#   dist   writes the GEN_KW distribution file (ert/prior.dist)
+#   apply  runs in each realization and writes the include files from parameters.txt
+group: {{param:genkw_group}}
+region_keyword: {{param:region_keyword}}
+zones: {{param:zones}}
+faults: {{param:faults}}
+zone_pairs: {{param:zone_pairs}}
+multregt_direction: {{param:multregt_direction}}
+contact_groups: {{param:contact_groups}}
+sattab_source: {{param:sattab_source}}
+equil_source: {{param:equil_source}}
+aquifer:
+  id: {{param:aquifer_id}}
+  datum: {{param:aquifer_datum}}
+  volume: {{param:aquifer_volume}}
+  compressibility: {{param:aquifer_compressibility}}
+  pi: {{param:aquifer_pi}}
+  pvt_table: {{param:aquifer_pvt_table}}
+priors:
+  perm: {{param:perm_prior}}
+  poro: {{param:poro_prior}}
+  kvkh: {{param:kvkh_prior}}
+  multflt: {{param:multflt_prior}}
+  multregt: {{param:multregt_prior}}
+  krw_exp: {{param:krw_exp_prior}}
+  krow_exp: {{param:krow_exp_prior}}
+  contact: {{param:contact_prior}}
+  aquifer: {{param:aquifer_prior}}

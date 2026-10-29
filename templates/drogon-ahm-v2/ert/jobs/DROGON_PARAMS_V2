@@ -1,0 +1,2 @@
+EXECUTABLE ../../jobs/drogon_params_v2.py
+ARGLIST <CONFIG_PATH>/../static/drogon_static.npz

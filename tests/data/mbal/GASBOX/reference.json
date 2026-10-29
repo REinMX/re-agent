@@ -1,0 +1,15 @@
+{
+  "deck": "GASBOX.DATA",
+  "fluid": "gas",
+  "pi": 3999.939453125,
+  "cw": 3e-06,
+  "cf": 4e-06,
+  "giip_simulator": 35995792.0,
+  "bgi": 0.7600107014588232,
+  "swi": 0.2000897932300657,
+  "notes": [
+    "Pi and the first date come from an extrapolation of the first two summary rows to zero production",
+    "",
+    "PVT region 1 only"
+  ]
+}

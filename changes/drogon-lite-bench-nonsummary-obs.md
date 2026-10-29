@@ -1,0 +1,2 @@
+### Fixed
+- `tools/drogon_lite_bench.py` reads the current drogon-lite observation file, which has RFT and breakthrough observations next to the summary ones. It grades the SUMMARY_OBSERVATION blocks as before and no longer refuses the file. Every other observation (RFT_OBSERVATION, BREAKTHROUGH_OBSERVATION, GENERAL_OBSERVATION) is listed in `bench.json` `skipped_observations` with its kind and the reason, and a `NOTE:` line names them. Skipped observations never count as a pass or as zero. A file with no SUMMARY_OBSERVATION, or with duplicate names, is still refused.

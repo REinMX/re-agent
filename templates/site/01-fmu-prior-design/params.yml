@@ -1,0 +1,49 @@
+# Template values. render_template.py reads the defaults here; --set name=value overrides one.
+# A null value has no default: give it with --set. The defaults document the public Drogon example
+# (OPM/opm-tests, ODbL). Replace them with the values of your model.
+
+agent_root: null                  # absolute path of the reservoir-engineer-agent checkout (or .reservoir-agent)
+case_name: drogon_prior
+num_realizations: 100
+random_seed: 20261015
+num_cpu: 1                        # NUM_CPU > 1 means MPI for FLOW. Do not give FLOW a --threads argument.
+max_runtime: 1800
+queue_name_option: LSF_QUEUE      # the QUEUE_OPTION name for the queue: LSF_QUEUE (LSF), PARTITION (SLURM), QUEUE (TORQUE)
+
+deck_dir: null                    # absolute path of the deck folder (Drogon example: <case>/deck)
+deck_data: DROGON_AHM.DATA        # the DATA file in <deck_dir>/model
+eclbase: model/DROGON-<IENS>
+summary_keys: "WOPR:* WWCT:* WGOR:* WBHP:* WWIR:* WGPR:* WWPR:* FOPT FOPR FWPT FGPT FWIT FPR FWCT FGOR"
+
+genkw_group: PRIOR
+region_keyword: M                 # MULTIREG region set: M = MULTNUM, F = FLUXNUM, O = OPERNUM
+zones: {VALYSAR: 1, THERYS: 2, VOLON: 3}
+faults: [F1, F2, F3, F4, F5, F6]
+zone_pairs: [[VALYSAR, THERYS], [THERYS, VOLON]]
+multregt_direction: Z
+contact_groups: {OWC_CENTRAL: [2, 3, 5, 6], OWC_FLANK: [1, 4, 7]}
+sattab_source: props/drogon.sattab      # relative to <runpath>/include
+equil_source: solution/drogon.equil     # relative to <runpath>/include
+
+perm_prior: LOGUNIF 0.33 3.0
+poro_prior: UNIFORM 0.85 1.15
+kvkh_prior: LOGUNIF 0.2 5.0
+multflt_prior: LOGUNIF 0.001 1.0
+multregt_prior: LOGUNIF 0.0001 1.0
+krw_exp_prior: UNIFORM 0.6 1.6
+krow_exp_prior: UNIFORM 0.6 1.6
+contact_prior: UNIFORM -12 12
+aquifer_prior: LOGUNIF 0.01 10.0
+
+aquifer_id: 1
+aquifer_datum: 1750
+aquifer_volume: 2.0e+9
+aquifer_compressibility: 5.0e-5
+aquifer_pi: 300.0
+aquifer_pvt_table: 1
+
+obs_producers: [A1, A2, A3, A4]
+obs_injectors: [A5, A6]
+obs_dates: [2018-04-01, 2018-07-01, 2018-10-01, 2019-01-01, 2019-04-01, 2019-07-01, 2019-10-01, 2020-01-01, 2020-04-01, 2020-07-01]
+obs_value_suffix: '""'            # "H" reads WOPRH etc. from a history case; "" reads WOPR from a truth case
+obs_noise_seed: 20261015          # synthetic truth only. Use null for field history.

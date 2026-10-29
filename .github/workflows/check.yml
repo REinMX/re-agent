@@ -1,0 +1,26 @@
+# Linux only. Native Windows behavior of the manual installer and export is not tested here.
+# Unit tests without Komodo. Tests that need ERT, res2df, or test data skip here.
+# Run `make check-full` in a Komodo environment before a release.
+name: check
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  check:
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12"]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install pytest ruff
+      - run: python -m ruff check .
+      - run: python -m ruff format --check .
+      - run: python tools/check_skills.py
+      - run: python -m pytest -q -rs

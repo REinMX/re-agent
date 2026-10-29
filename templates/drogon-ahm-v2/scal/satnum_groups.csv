@@ -1,0 +1,13 @@
+SATNUM,GROUP,FACIES
+1,CH_USF,Channel_upper
+2,CR,Crevasse_upper
+3,CH_USF,Uppershoreface_upper
+4,LSF,Lowershoreface_upper
+5,OFF_FP,Offshore_upper
+6,OFF_FP,Floodplain_upper
+7,CH_USF,Channel_lower
+8,CR,Crevasse_lower
+9,CH_USF,Uppershoreface_lower
+10,LSF,Lowershoreface_lower
+11,OFF_FP,Offshore_lower
+12,OFF_FP,Floodplain_lower

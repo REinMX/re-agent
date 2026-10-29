@@ -1,0 +1,9 @@
+Parent ensemble: iter-1
+Target ensemble: iter-2
+Alpha: 3.0
+Global scaling: 4.0
+Standard cutoff: 1e-06
+Active observations: 9
+Deactivated observations: missing respons(es): 0
+Deactivated observations: ensemble_std < STD_CUTOFF: 0
+Deactivated observations: outliers: 0

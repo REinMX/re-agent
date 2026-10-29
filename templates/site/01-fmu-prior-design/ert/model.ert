@@ -1,0 +1,12 @@
+-- Model part of {{param:case_name}}: parameters, forward model and responses.
+-- prior.ert and the AHM config of 02-ahm-esmda-qc include this file. They define <DECK_DIR> and ECLBASE.
+-- Run bin/prior_design.py dist first: it writes prior.dist from design.yml.
+DATA_FILE     <DECK_DIR>/model/{{param:deck_data}}
+GEN_KW        {{param:genkw_group}}  prior.dist
+
+INSTALL_JOB   PRIOR_PARAMS  jobs/PRIOR_PARAMS
+FORWARD_MODEL COPY_DIRECTORY(<FROM>=<DECK_DIR>/include, <TO>=<RUNPATH>/include)
+FORWARD_MODEL PRIOR_PARAMS
+FORWARD_MODEL {{site:simulator.forward_model}}(<ECLBASE>=<ECLBASE>)
+
+SUMMARY {{param:summary_keys}}

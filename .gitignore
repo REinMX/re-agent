@@ -1,0 +1,15 @@
+site.contract.yml
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.venv/
+/reports/
+*.pyc
+worklog/
+evals/results/*/transcripts/
+evals/results/*/results.json
+uv.lock
+.env
+.env.*
+exports/
+dist/

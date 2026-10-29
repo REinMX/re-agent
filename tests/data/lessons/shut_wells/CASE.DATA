@@ -1,0 +1,12 @@
+-- Synthetic deck for the G9 lesson: observations while a well does not flow. No project data.
+RUNSPEC
+DIMENS
+ 2 2 1 /
+OIL
+WATER
+GAS
+START
+ 1 JAN 2020 /
+SCHEDULE
+INCLUDE
+ 'schedule.sch' /

@@ -1,0 +1,11 @@
+{
+ "steps": [
+  {
+   "name": "LINK_INPUTS",
+   "status": "Failure",
+   "error": "exit code 1",
+   "stdout": "LINK_INPUTS.stdout.0",
+   "stderr": "LINK_INPUTS.stderr.0"
+  }
+ ]
+}

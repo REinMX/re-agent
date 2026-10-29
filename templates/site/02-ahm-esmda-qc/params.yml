@@ -1,0 +1,33 @@
+# Template values. render_template.py reads the defaults here; --set name=value overrides one.
+# A null value has no default: give it with --set. The defaults document the public Drogon example
+# (OPM/opm-tests, ODbL). Render 01-fmu-prior-design first, into a sibling folder of this one.
+
+agent_root: null                  # absolute path of the reservoir-engineer-agent checkout (or .reservoir-agent)
+case_name: drogon_ahm
+num_realizations: 100             # the Drogon run used 16 realizations for 20 parameters
+min_realizations: 80
+random_seed: 20261015             # one seed is a diagnostic only. A claim needs ahm_defaults.MIN_SEEDS (3) seeds.
+num_cpu: 1                        # NUM_CPU > 1 means MPI for FLOW. Do not give FLOW a --threads argument.
+max_runtime: 1800
+queue_name_option: LSF_QUEUE      # LSF_QUEUE (LSF), PARTITION (SLURM), QUEUE (TORQUE)
+
+# ES-MDA weights, given already rescaled so that sum(1/w) = 1. ERT 23 and 26 rescale other weights,
+# and the plan and the update log then disagree.
+esmda_weights: 15,7.5,3.75,1.875
+gen_kw_update: GLOBAL             # GLOBAL or ADAPTIVE (correlation threshold default 3/sqrt(N)). DISTANCE is not valid for GEN_KW.
+field_update: GLOBAL              # GLOBAL, ADAPTIVE or DISTANCE (needs LOCALIZATION blocks on the observations)
+
+deck_dir: null                    # absolute path of the deck folder (Drogon example: <case>/deck)
+eclbase: model/DROGON-<IENS>
+prior_dir: ../01-fmu-prior-design  # the rendered 01 folder, relative to this folder
+obs_config: ../01-fmu-prior-design/obs/history.obs  # relative to this folder
+truth_file: "null"                # a synthetic case only: one 'NAME value' per line
+
+# The string "null" below means unset: the renderer counts a YAML null as a missing value.
+# allow_members_reason lets ahm_preflight accept fewer members than ahm_defaults.MEMBERS (100). It passes
+# --allow-members <reason> and prints the reason. A reason with a colon needs YAML quotes, for example
+# --set 'allow_members_reason="16 members: Drogon example"'.
+allow_members_reason: "null"
+# heldout_split is an ahm-heldout/1 split.json (skills/history-match-qc heldout_score.py), relative to this folder or
+# absolute. Keep it, and its files, in a folder that does not contain the QC output folder.
+heldout_split: "null"

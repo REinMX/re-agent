@@ -1,0 +1,42 @@
+controls:
+- name: rate
+  type: well_control
+  min: 1000
+  max: 12000
+  initial_guess: 6500
+  perturbation_magnitude: 500
+  variables:
+  - name: A5
+- name: drill
+  type: generic_control
+  min: 0
+  max: 1
+  initial_guess: 0.5
+  perturbation_magnitude: 0.05
+  variables:
+  - name: OP7
+  - name: OP8
+objective_functions:
+- name: npv
+  weight: 0.5
+- name: fopt
+  weight: 0.5
+output_constraints:
+- name: vrr
+  lower_bound: 0.9
+model:
+  realizations:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+optimization:
+  algorithm: optpp_q_newton
+  max_batch_num: 6
+  perturbation_num: 1
+  cvar:
+    percentile: 0.25

@@ -1,0 +1,6 @@
+### Changed
+- `make skills` and `make check` no longer find and run an STE linter from `STE_LINT` or the home folder. The result is the same on each host.
+- Add `make ste STE_LINT=<path>` (also `make prose`) and `check_skills.py --ste-lint PATH`. It fails when the path is not a file, prints the linter path, SHA-256 and Python, keeps the linter stdout and stderr on failure, and scans only `SKILL.md` and `references/**/*.md` files that are not symlinks (no vendor skills).
+- `make hooks` now needs `PY=<python>`. Before it changes the git config, it tests that this Python runs and can import pytest and ruff, so the hook cannot fail only because of the interpreter. It records the Python as `reservoirAgent.python`. The pre-push hook uses `PY` from the environment or that Python, removes `PYTHONPATH` and `PYTHONHOME`, and stops the push when there is no interpreter.
+### Fixed
+- Lean test runs without NumPy, pandas, ERT, semeio or res2df: the screening-gate tests skip without NumPy or pandas, the ERT and semeio refusal tests no longer depend on which of the two is installed, and the schedule tests select `--parser text` for the text scan and run the OPM parser case only with res2df. The default parser stays `opm`.

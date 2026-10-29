@@ -1,0 +1,56 @@
+WELSPECS
+ 'P1' 'G' 1 1 1* OIL /
+ 'P2' 'G' 2 1 1* OIL /
+ 'I1' 'G' 2 2 1* WATER /
+/
+COMPDAT
+ 'P1' 1 1 1 1 OPEN /
+ 'I1' 2 2 1 1 OPEN /
+/
+WCONHIST
+ 'P1' 'OPEN' 'ORAT' 100 10 1000 /
+/
+WCONINJH
+ 'I1' 'WATER' 'OPEN' 200 /
+/
+DATES
+ 1 FEB 2020 /
+ 1 MAR 2020 /
+/
+COMPDAT
+ 'P2' 2 1 1 1 OPEN /
+/
+WCONHIST
+ 'P2' 'OPEN' 'ORAT' 50 5 500 /
+/
+DATES
+ 1 APR 2020 /
+/
+WCONHIST
+ 'P1' 'SHUT' 'ORAT' 0 0 0 /
+/
+DATES
+ 1 MAY 2020 /
+/
+WCONINJH
+ 'I1' 'WATER' 'OPEN' 0 /
+/
+DATES
+ 1 JUN 2020 /
+/
+WCONHIST
+ 'P1' 'OPEN' 'ORAT' 80 20 800 /
+/
+WCONINJH
+ 'I1' 'WATER' 'OPEN' 150 /
+/
+DATES
+ 1 JUL 2020 /
+/
+WELOPEN
+ 'P1' 'SHUT' 1 1 1 /
+ 'I1' 'SHUT' /
+/
+DATES
+ 1 AUG 2020 /
+/

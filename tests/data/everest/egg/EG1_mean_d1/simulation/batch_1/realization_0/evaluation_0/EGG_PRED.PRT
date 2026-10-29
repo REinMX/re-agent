@@ -1,0 +1,19 @@
+Starting time step 0, stepsize 30 days, at day 1260/1290, date = 26-Nov-2014
+Restart file written for report step  42/120, date = 26-Nov-2014 00:00:00
+Well PROD1 will be shut as it can not operate under current reservoir conditions.
+--
+Starting time step 0, stepsize 30 days, at day 1650/1680, date = 21-Dec-2015
+Restart file written for report step  55/120, date = 21-Dec-2015 00:00:00
+Well PROD4 will be shut as it can not operate under current reservoir conditions.
+--
+Starting time step 0, stepsize 30 days, at day 2160/2190, date = 14-May-2017
+Restart file written for report step  72/120, date = 14-May-2017 00:00:00
+Well PROD1 will be shut as it can not operate under current reservoir conditions.
+--
+Starting time step 0, stepsize 30 days, at day 2190/2220, date = 13-Jun-2017
+Restart file written for report step  73/120, date = 13-Jun-2017 00:00:00
+Well PROD4 will be shut as it can not operate under current reservoir conditions.
+--
+Starting time step 0, stepsize 30 days, at day 2250/2280, date = 12-Aug-2017
+Restart file written for report step  75/120, date = 12-Aug-2017 00:00:00
+Well PROD3 will be shut as it can not operate under current reservoir conditions.

@@ -1,0 +1,49 @@
+jobs: {{param:jobs}}
+# Drill-order case {{param:case_name}}. {{param:well_control_dir}}/jobs/well_control.py reads it in each runpath.
+# {{param:well_control_dir}}/bin/make_configs.py writes the Everest config.
+deck:
+  data: {{param:pred_deck}}
+  restart_link: {{param:restart_link}}
+  restart_glob: {{param:restart_glob}}
+  include_dir: {{param:include_dir}}
+  schedule_file: {{param:schedule_file}}
+simulator:
+  executable: {{site:simulator.executable}}
+  args: {{param:flow_args}}
+posterior: {{site:scratch_root}}/{{param:ahm_case}}/realization-<REALIZATION_ID>/iter-{{param:ahm_last_iter}}
+schedule:
+  start: {{param:start}}
+  end: {{param:end}}
+  periods: {{param:periods}}
+  report_months: {{param:report_months}}
+  bhp_min_prod: {{param:bhp_min_prod}}
+  bhp_max_inj: {{param:bhp_max_inj}}
+wells:
+  producers: {{param:producers}}
+  injectors: {{param:injectors}}
+drill:
+  slots: {{param:rig_slots}}
+  well_cost: {{param:well_cost}}
+  wells: {{param:drill_wells}}
+economics:
+  oil_price: {{param:oil_price}}
+  gas_price: {{param:gas_price}}
+  water_production_cost: {{param:water_production_cost}}
+  water_injection_cost: {{param:water_injection_cost}}
+  discount_rate: {{param:discount_rate}}
+everest:
+  realizations: {{param:realizations}}
+  simulation_root: {{site:scratch_root}}/everest/{{param:case_name}}
+  random_seed: {{param:random_seed}}
+  max_runtime: {{param:max_runtime}}
+  queue:
+    system: {{site:queue.system}}
+    name: {{site:queue.name}}
+    max_running: {{site:queue.max_running}}
+controls:
+  drill: {perturbation: {{param:drill_perturbation}}}
+experiments:
+  drill_order:
+    controls: [drill]
+    constraints: false
+    optimization: {algorithm: optpp_q_newton, perturbation_num: {{param:perturbation_num}}, max_batch_num: {{param:max_batch_num}}}

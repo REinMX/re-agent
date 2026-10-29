@@ -1,0 +1,16 @@
+# Observation builder input for bin/make_obs.py.
+producers: {{param:obs_producers}}
+injectors: {{param:obs_injectors}}
+dates: {{param:obs_dates}}
+value_suffix: {{param:obs_value_suffix}}
+noise_seed: {{param:obs_noise_seed}}
+producer_vectors: [WOPR, WWCT, WGOR, WBHP]
+injector_vectors: [WBHP]
+producer_flow: [WOPR, WWPR, WGPR]
+injector_flow: [WWIR]
+# Error per mnemonic: rel (fraction of |value|), min (floor), or abs. Error = max(rel * |value|, min), or abs.
+errors:
+  WOPR: {rel: 0.10, min: 20.0}
+  WWCT: {rel: 0.10, min: 0.02}
+  WGOR: {rel: 0.10, min: 5.0}
+  WBHP: {abs: 5.0}

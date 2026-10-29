@@ -1,0 +1,28 @@
+[project]
+name = "reservoir-engineer-agent"
+version = "0.3.1"
+description = "Skills, tools and instructions for a reservoir engineer agent in Claude Code and Codex"
+requires-python = ">=3.11"
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+dependencies = []
+
+[project.optional-dependencies]
+simulator = ["res2df>=1.0", "resdata>=5.0"]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "resinsight: drives a real ResInsight through rips. Deselected unless RUN_RESINSIGHT=1 (make check-resinsight).",
+    "drogonlite: full drogon-lite ES-MDA, about 10 minutes. Deselected unless RUN_DROGONLITE=1 (make check-drogonlite).",
+]
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]  # ruff format owns the line layout. Long message strings are fine.

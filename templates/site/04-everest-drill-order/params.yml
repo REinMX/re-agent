@@ -1,0 +1,45 @@
+# Template values. render_template.py reads the defaults here; --set name=value overrides one.
+# A null value has no default: give it with --set. The defaults document the public Drogon example
+# (OPM/opm-tests, ODbL). Render 03-everest-robust-well-control first, into a sibling folder of this one.
+
+agent_root: null                  # absolute path of the reservoir-engineer-agent checkout (or .reservoir-agent)
+case_name: drill_order
+well_control_dir: ../03-everest-robust-well-control  # the rendered 03 folder (job and config generator), relative to this folder
+pred_deck: null                   # absolute path of the prediction DATA file (Drogon example: DROGON_PRED.DATA)
+restart_link: HIST/DROGON
+restart_glob: model/DROGON-*.UNRST
+include_dir: include
+schedule_file: pred.sch
+flow_args: --threads-per-process=1  # options for the simulator itself. The ERT FLOW step must not get --threads.
+
+ahm_case: drogon_ahm
+ahm_last_iter: 4
+realizations: [0, 1, 2, 3, 4, 5, 6, 7]  # dry run only; the posterior link snippet gives them otherwise
+random_seed: 20261015
+max_runtime: 1200
+
+start: 2020-07-01
+end: 2025-01-01
+periods: [2020-07-01, 2021-07-01, 2022-07-01, 2023-07-01]
+report_months: 3
+bhp_min_prod: 150.0
+bhp_max_inj: 500.0
+producers: {A1: 3000.0, A2: 4000.0, A3: 4000.0, A4: 4000.0}
+injectors: {A5: 6500.0, A6: 6500.0}
+
+# New wells: initial priority (0-1), liquid rate, and a schedule file with WELSPECS and COMPDAT
+# (relative to this folder; the well stays SHUT until its drill date). You supply the files in wells/.
+drill_wells: {OP5: {priority: 0.8, rate: 3000.0, definition: wells/OP5.sch}, OP6: {priority: 0.6, rate: 3000.0, definition: wells/OP6.sch}, OP7: {priority: 0.4, rate: 3000.0, definition: wells/OP7.sch}, OP8: {priority: 0.2, rate: 3000.0, definition: wells/OP8.sch}}
+rig_slots: [2020-07-01, 2021-01-01, 2021-07-01, 2022-01-01]   # one slot for each new well, in time order
+well_cost: 25.0e+6                # cost of one well, discounted from its drill date
+drill_perturbation: 0.25          # a quarter of the priority range; see README
+perturbation_num: 2
+max_batch_num: 6
+
+oil_price: 400.0
+gas_price: 0.12
+water_production_cost: 30.0
+water_injection_cost: 10.0
+discount_rate: 0.08
+
+jobs: everest_models  # everest_models or custom
